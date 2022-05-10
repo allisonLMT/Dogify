@@ -50,7 +50,7 @@ function App() {
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <input type="submit" value="Generate pet names" />
+          <input type="submit" value="Generate names" />
         </form>
         <div >{result}</div>
      
