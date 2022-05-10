@@ -37,9 +37,9 @@ function App() {
      
     getResponse(url, parameters)
     .then(data => {
-      //console.log(data)
+      console.log(data)
       //takes the previous result array, and concats the new response, then updates the result state
-      var updatedResults = results.concat(data.choices[0].text)
+      var updatedResults = results.concat(data)
       setResults(updatedResults);
     });
   }
