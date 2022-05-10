@@ -11,7 +11,6 @@ console.log(results)
         <section className={styles.results}>
            {results.map(result => 
                 <OneResult prompt={prompt} result={result} key={result.id}/>    
-                
             )} 
         </section>
     )

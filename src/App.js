@@ -69,7 +69,7 @@ function App() {
               maxLength="1000"
               onChange={(e) => setSubjectInput(e.target.value)}
             />
-            <input type="submit" value="Generate Goldendoodle Poem" />
+            <input type="submit" value="Generate Goldendoodle Poem" id="submit"/>
         </form>
         
           {results.length > 0 &&
