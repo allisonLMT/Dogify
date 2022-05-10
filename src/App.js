@@ -36,6 +36,7 @@ function App() {
     getResponse(url, parameters)
     .then(data => {
       console.log(data)
+      //setResult(...data.choices[0].text)
       setResult(data.choices[0].text)
     });
   }
