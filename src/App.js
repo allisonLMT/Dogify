@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Results from './components/Results.js';
+import Footer from './components/Footer.js';
 import './App.css';
 
 function App() {
@@ -51,25 +52,27 @@ function App() {
  
 
   return (
-    <div className="App">
-      <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            name="object"
-            placeholder="Enter an object"
-            value={subjectInput}
-            onChange={(e) => setSubjectInput(e.target.value)}
-          />
-          <input type="submit" value="Generate Goldendoodle Poem" />
-        </form>
+    <div className='page-container'>
+      <div className='content-wrap'>
+        <form onSubmit={onSubmit}>
+            <input
+              type="text"
+              name="object"
+              placeholder="Enter an object"
+              value={subjectInput}
+              onChange={(e) => setSubjectInput(e.target.value)}
+            />
+            <input type="submit" value="Generate Goldendoodle Poem" />
+          </form>
+        
+          {results.length > 0 &&
+            <section>
+              <Results results={results} /> 
+            </section>
+          }
       
-        {results.length > 0 &&
-          <section>
-            <Results results={results} /> 
-          </section>
-         }
-      
-     
+      </div>
+      <Footer />
     </div>
   );
 }
