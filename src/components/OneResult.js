@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from '../styles/oneResult.module.scss';
 
 function OneResult() {
 
 
     return (
-        <div>
-
-        </div>
+        <article className={styles.oneResult}>
+            
+        </article>
     )
 }
 

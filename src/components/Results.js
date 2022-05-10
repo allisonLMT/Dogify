@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from '../styles/results.module.scss';
 
 function Results() {
 
-
+//results need to be displayed newest to oldest
     return (
-        <div>
+        <section className={styles.results}>
 
-        </div>
+        </section>
     )
 }
 

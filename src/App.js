@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import Results from './components/Results.js';
 import './App.css';
 
 function App() {
 
   const [subjectInput, setSubjectInput] = useState("");
-  const [result, setResult] = useState();
+  const [results, setResults] = useState([]);
+  
 
   async function getResponse(url, parameters) {
     
@@ -35,18 +37,18 @@ function App() {
      
     getResponse(url, parameters)
     .then(data => {
-      console.log(data)
-      //setResult(...data.choices[0].text)
-      setResult(data.choices[0].text)
+      //console.log(data)
+      //takes the previous result array, and concats the new response, then updates the result state
+      var updatedResults = results.concat(data.choices[0].text)
+      setResults(updatedResults);
     });
   }
 
   function generatePrompt(input) {
-    console.log("generating prompt " + input)
     //takes the user input and generates a prompt to create a poem
     return `Write a poem about a Goldendoodle and ${input}`; 
   }
-
+ 
 
   return (
     <div className="App">
@@ -60,7 +62,13 @@ function App() {
           />
           <input type="submit" value="Generate Goldendoodle Poem" />
         </form>
-        <div >{result}</div>
+      
+        {results.length > 0 &&
+          <section>
+            <Results results={results} /> 
+          </section>
+         }
+      
      
     </div>
   );
