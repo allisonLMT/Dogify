@@ -5,7 +5,8 @@ import './App.css';
 
 function App() {
 
-  const [subjectInput, setSubjectInput] = useState("");
+  const [subjectInput, setSubjectInput] = useState('');
+  const [prompt, setPrompt] = useState('');
   const [results, setResults] = useState([]);
   
 
@@ -47,13 +48,16 @@ function App() {
 
   function generatePrompt(input) {
     //takes the user input and generates a prompt to create a poem
-    return `Write a poem about a Goldendoodle and ${input}`; 
+    const goldenPrompt = `Write a poem about a Goldendoodle and ${input}`;
+    setPrompt(goldenPrompt);
+    return  goldenPrompt;
   }
  
 
   return (
     <div className='page-container'>
       <div className='content-wrap'>
+        <h1>Goldendoodle Poem Generator</h1>
         <form onSubmit={onSubmit}>
             <input
               type="text"
@@ -63,11 +67,11 @@ function App() {
               onChange={(e) => setSubjectInput(e.target.value)}
             />
             <input type="submit" value="Generate Goldendoodle Poem" />
-          </form>
+        </form>
         
           {results.length > 0 &&
             <section>
-              <Results results={results} /> 
+              <Results prompt={prompt} results={results} /> 
             </section>
           }
       

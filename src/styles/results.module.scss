@@ -1,1 +1,7 @@
-//styles for the group of results
+// Styling for all  of the results 
+
+.results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
