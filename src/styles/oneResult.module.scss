@@ -1,4 +1,4 @@
-//styles for oneResult
+@use '_variables' as *;
 
 .oneResult {
     max-width: 300px;
@@ -8,6 +8,8 @@
     flex-wrap: wrap;
     align-items: stretch;
     align-content: flex-start;
-    border: 3px solid green;
+    border: 3px solid $darkGreen;
     border-radius: 5px;
+    background-color: $offWhite;
+    color: $darktext;
 }

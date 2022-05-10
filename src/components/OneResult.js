@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from '../styles/oneResult.module.scss';
 
-function OneResult({ prompt, result }) {
+function OneResult({ result }) {
 
     //needs to show the prompt and the result (at a minimum)
 
     return (
-        <article className={styles.oneResult} key={result.id}>
+        <article className={styles.oneResult}>
             <section>
                 <h2>Prompt:</h2>
-                <p>{prompt}</p>
+                <p>{result.prompt}</p>
             </section>
             <section>
                 <h2>Response:</h2>

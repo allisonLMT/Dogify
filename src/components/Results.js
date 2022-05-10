@@ -10,7 +10,7 @@ console.log(results)
     return (
         <section className={styles.results}>
            {results.map(result => 
-                <OneResult prompt={prompt} result={result} />    
+                <OneResult prompt={prompt} result={result} key={result.id}/>    
                 
             )} 
         </section>

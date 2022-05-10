@@ -6,7 +6,6 @@ import './App.css';
 function App() {
 
   const [subjectInput, setSubjectInput] = useState('');
-  const [prompt, setPrompt] = useState('');
   const [results, setResults] = useState([]);
   
 
@@ -39,6 +38,8 @@ function App() {
      
     getResponse(url, parameters)
     .then(data => {
+      //add a key value pair to store the prompt with it's result
+      data.prompt = parameters.prompt;
       console.log(data)
       //takes the previous result array, and concats the new response, then updates the result state
       var updatedResults = results.concat(data)
@@ -49,7 +50,7 @@ function App() {
   function generatePrompt(input) {
     //takes the user input and generates a prompt to create a poem
     const goldenPrompt = `Write a poem about a Goldendoodle and ${input}`;
-    setPrompt(goldenPrompt);
+
     return  goldenPrompt;
   }
  
@@ -71,7 +72,7 @@ function App() {
         
           {results.length > 0 &&
             <section>
-              <Results prompt={prompt} results={results} /> 
+              <Results results={results} /> 
             </section>
           }
       
