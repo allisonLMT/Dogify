@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Results from './components/Results.js';
 import Footer from './components/Footer.js';
-import './App.css';
+import './index.scss';
 
 function App() {
 
@@ -49,7 +49,7 @@ function App() {
 
   function generatePrompt(input) {
     //takes the user input and generates a prompt to create a poem
-    const goldenPrompt = `Write a poem about a Goldendoodle and ${input}`;
+    const goldenPrompt = `Write a story about a Goldendoodle and ${input}`;
 
     return  goldenPrompt;
   }
@@ -65,6 +65,8 @@ function App() {
               name="object"
               placeholder="Enter an object"
               value={subjectInput}
+              // API allows maxlength = 1000
+              maxLength="1000"
               onChange={(e) => setSubjectInput(e.target.value)}
             />
             <input type="submit" value="Generate Goldendoodle Poem" />
