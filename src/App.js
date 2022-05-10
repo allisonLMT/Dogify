@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
 
-  const [animalInput, setAnimalInput] = useState("");
+  const [subjectInput, setSubjectInput] = useState("");
   const [result, setResult] = useState();
 
   async function getResponse(url, parameters) {
@@ -25,7 +25,7 @@ function App() {
 
     const url = 'https://api.openai.com/v1/engines/text-curie-001/completions';
     const parameters = {
-      prompt: "Write a poem about a dog wearing skis",
+      prompt: generatePrompt(subjectInput),
       temperature: 0.5,
       max_tokens: 64,
       top_p: 1.0,
@@ -39,6 +39,12 @@ function App() {
     });
   }
 
+  function generatePrompt(input) {
+    console.log("generating prompt " + input)
+    //takes the user input and generates a prompt to create a poem
+    return `Write a poem about a Goldendoodle and ${input}`; 
+  }
+
 
   return (
     <div className="App">
@@ -47,10 +53,10 @@ function App() {
             type="text"
             name="animal"
             placeholder="Enter an animal"
-            value={animalInput}
-            onChange={(e) => setAnimalInput(e.target.value)}
+            value={subjectInput}
+            onChange={(e) => setSubjectInput(e.target.value)}
           />
-          <input type="submit" value="Generate names" />
+          <input type="submit" value="Generate Haiku" />
         </form>
         <div >{result}</div>
      
