@@ -36,6 +36,7 @@ function App() {
     getResponse(url, parameters)
     .then(data => {
       console.log(data)
+      setResult(data.choices[0].text)
     });
   }
 
@@ -51,12 +52,12 @@ function App() {
       <form onSubmit={onSubmit}>
           <input
             type="text"
-            name="animal"
-            placeholder="Enter an animal"
+            name="object"
+            placeholder="Enter an object"
             value={subjectInput}
             onChange={(e) => setSubjectInput(e.target.value)}
           />
-          <input type="submit" value="Generate Haiku" />
+          <input type="submit" value="Generate Goldendoodle Poem" />
         </form>
         <div >{result}</div>
      
