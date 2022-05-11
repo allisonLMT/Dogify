@@ -30,6 +30,19 @@ form {
   text-align: center;
 }
 
+label {
+    display: block;
+    filter: grayscale(1); //changes the radio button dot to gray, instead of the default blue
+}
+
+#textBox {
+    width: 275px;
+    padding: 5px;
+    font-size: 1.3rem;
+    border: 1px solid $darktext;
+    border-radius: 3px;
+}
+
 /* Buttons styles start */
 // https://css-tricks.com/overriding-default-button-styles/
 #submit {

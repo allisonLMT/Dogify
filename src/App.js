@@ -64,6 +64,7 @@ function App() {
                 <input
                     type="text"
                     name="object"
+                    id="textBox"
                     placeholder="Enter an object"
                     value={subjectInput}
                     // API allows maxlength = 1000

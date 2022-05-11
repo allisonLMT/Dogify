@@ -6,15 +6,17 @@ function EngineRadio({ engine, selectedEngine, onRadioChange }) {
 
     return (
         <>
-            <input 
-              type="radio" 
-              id={engine} 
-              name="engine" 
-              value={engine} 
-              onChange={onRadioChange} 
-              checked={selectedEngine === engine}
-            />
-            <label htmlFor={engine}>{engine}</label>
+            <label htmlFor={engine}>
+                <input 
+                type="radio" 
+                id={engine} 
+                name="engine" 
+                value={engine} 
+                onChange={onRadioChange} 
+                checked={selectedEngine === engine}
+                />
+                {engine}
+            </label>
         </>
     )
 }
