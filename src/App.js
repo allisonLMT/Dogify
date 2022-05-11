@@ -59,7 +59,7 @@ function App() {
     return (
     <div className='page-container'>
         <div className='content-wrap'>
-            <h1>Dogify</h1>
+            <h1>Dogify!</h1>
             <form onSubmit={onSubmit}>
                 <input
                     type="text"
@@ -76,7 +76,7 @@ function App() {
                 <EngineRadio engine='text-babbage-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
                 <EngineRadio engine='text-ada-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
 
-                <input type="submit" value="Dogify!" id="submit"/>
+                <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
         
             {results.length > 0 &&
