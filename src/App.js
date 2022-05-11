@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import EngineRadio from './components/EngineRadio';
 import DropDown from './components/DropDown';
 import Results from './components/Results.js';
 import Footer from './components/Footer.js';
@@ -51,11 +50,6 @@ function App() {
         const goldenPrompt = `Write a story about a Goldendoodle and ${input}`;
         return  goldenPrompt;
     }
- 
-    // function onRadioChange(event) {
-    //     console.log("radio change")
-    //     setSelectedEngine(event.target.value);
-    // }
 
     function onDropDownChange(event) {
         console.log("dropdown change")
@@ -78,12 +72,7 @@ function App() {
                     onChange={(e) => setSubjectInput(e.target.value)}
                 />
                 <DropDown onDropDownChange={onDropDownChange} />
-                {/* <p id="radioPrompt">Please select the engine:</p>
-                <EngineRadio engine='text-curie-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
-                <EngineRadio engine='text-davinci-002' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
-                <EngineRadio engine='text-babbage-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
-                <EngineRadio engine='text-ada-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} /> */}
-
+                
                 <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
         
