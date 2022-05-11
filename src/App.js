@@ -39,8 +39,9 @@ function App() {
             //add a key value pair to store the prompt with it's result
             data.prompt = parameters.prompt;
             
-            //takes the previous result array, and concats the new response, then updates the result state
-            var updatedResults = results.concat(data)
+            //takes the existing result array, and concats the new response
+            //then reverses the array (so when mapped, they are newest to oldest) and updates the result state
+            var updatedResults = results.concat(data).reverse();
             setResults(updatedResults);
         });
     }
