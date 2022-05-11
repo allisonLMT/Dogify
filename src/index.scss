@@ -1,31 +1,29 @@
 @use 'styles/_variables' as *;
 
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: $mediumGreen;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $mediumGreen;
 }
 
 .page-container {
-  position: relative;
-  min-height: calc(100vh - 50px);
+    position: relative;
+    min-height: calc(100vh - 50px);
   //border: 1px solid red;
   
 }
 .content-wrap {
-  margin: 0 auto;
-  padding: 1rem;
-//   padding-bottom: 4.6875rem ;
-//   min-height: calc(100vh - 50px);
+    margin: 0 auto;
+
   //border: 1px solid blue;
 }
 
 h1 {
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
-  font-size: 3.75rem;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 3.75rem;
 }
 
 h2 {
@@ -37,14 +35,16 @@ p {
     margin-block-start: 0.5rem;
 }
 
+.intro,
 form {
-  text-align: left;
+    margin: 0 1rem;
+    text-align: left;
 }
 
 #textBox {
     width: 275px;
     padding: 5px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     border: 1px solid $darktext;
     border-radius: 3px;
 }
@@ -54,31 +54,31 @@ form {
 /* Buttons styles start */
 // https://css-tricks.com/overriding-default-button-styles/
 #submit {
-  display: block;
-  padding: 1rem 1.5rem;
-  margin: 2rem auto 1rem;
-  text-decoration: none;
-  color: white;
-  font-size: 1.3rem;
-  line-height: 1;
-  border: none;
-  border-radius: 5px;
-  background-color: $extraDarkGreen;
-  filter: drop-shadow(2px 2px 2px darkgrey);
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 250ms ease-in-out, transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+    display: block;
+    padding: 1rem 1.5rem;
+    margin: 2rem auto 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1;
+    border: none;
+    border-radius: 5px;
+    background-color: $extraDarkGreen;
+    filter: drop-shadow(2px 2px 2px darkgrey);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 #submit:hover,
 #submit:focus {
-  background-color: $darkGreen;
-  color: black;
+    background-color: $darkGreen;
+    color: black;
 }
 
 #submit:active {
-  transform: scale(0.97);
+    transform: scale(0.97);
 }
 /* Button styles end */

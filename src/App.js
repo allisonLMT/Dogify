@@ -54,6 +54,7 @@ function App() {
         const items = ['a green pencil sharpener', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and marshmallows', 'some unicycles and a clown', 'a pair of shoes', 'a cat and a toucan', 'some warm cookies and milk'];
         const randomItem = items[randomNum(items)];
 
+        //if the user hasn't added input, use a random item instead
         if (input === '') {
             input = randomItem;
         }
@@ -75,7 +76,7 @@ function App() {
     <div className='page-container'>
         <div className='content-wrap'>
             <h1>Dogify!</h1>
-            <section>
+            <section class='intro'>
                 <h2>What's Dogify?</h2>
                 <p>Dogify will write a story about a dog and whatever else you choose!</p>
                 <p>Not sure? Leave it blank and we'll fill it in. And don't worry, we'll pick a dog for you.</p>
