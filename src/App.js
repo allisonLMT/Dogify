@@ -52,7 +52,7 @@ function App() {
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Boxer'];
         const randomBreed = breeds[randomNum(breeds)]
 
-        const items = ['a green pencil sharpener', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and marshmallows', 'some unicycles and a clown', 'a pair of shoes', 'a cat and a toucan', 'some warm cookies and milk'];
+        const items = ['a green pencil sharpener', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and marshmallows', 'some unicycles and a clown', 'a pair of shoes', 'a cat and a toucan', 'some warm cookies and milk','a dark and stormy night'];
         const randomItem = items[randomNum(items)];
 
         //if the user hasn't added input, use a random item instead
@@ -95,6 +95,7 @@ function App() {
                     onChange={(e) => setSubjectInput(e.target.value)}
                 />
                 <DropDown onDropDownChange={onDropDownChange} />
+                <i class="material-icons">settings</i>
 
                 <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
