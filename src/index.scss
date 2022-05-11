@@ -30,18 +30,6 @@ form {
   text-align: center;
 }
 
-label {
-    display: block;
-    line-height: 1.5;
-    filter: grayscale(1); //changes the radio button dot to gray, instead of the default blue
-}
-
-#radioPrompt {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin: 15px 0 5px;
-}
-
 #textBox {
     width: 275px;
     padding: 5px;
