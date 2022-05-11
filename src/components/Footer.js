@@ -8,7 +8,7 @@ function Footer() {
 
     return (
         <div className={styles.footer}>
-            <p>&copy;{year} Allison Tredwell</p>
+            <a href="https://atredwell.com/">&copy;{year} Allison Tredwell</a>
         </div>
     )
 }
