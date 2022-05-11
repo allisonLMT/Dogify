@@ -37,32 +37,27 @@ form {
   padding: 1rem 1.5rem;
   margin: 1rem auto;
   text-decoration: none;
-  color: $darktext;
-  font-family: sans-serif;
+  color: white;
   font-size: 1.3rem;
   line-height: 1;
-  border: 2px solid $darkGreen;
+  border: none;
   border-radius: 5px;
-  background-color: $darkGreen;
+  background-color: $extraDarkGreen;
   filter: drop-shadow(2px 2px 2px darkgrey);
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background-color 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
 #submit:hover,
 #submit:focus {
-  background: #0053ba;
-}
-
-#submit:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
+  background-color: $darkGreen;
+  color: black;
 }
 
 #submit:active {
-  transform: scale(0.99);
+  transform: scale(0.97);
 }
 /* Button styles end */
