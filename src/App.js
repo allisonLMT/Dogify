@@ -27,7 +27,6 @@ function App() {
 
   function onSubmit(event) {
     event.preventDefault();
-    console.log(selectedEngine)
     const url = `https://api.openai.com/v1/engines/${selectedEngine}/completions`;
     const parameters = {
       prompt: generatePrompt(subjectInput),
