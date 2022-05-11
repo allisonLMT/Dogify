@@ -7,6 +7,7 @@ function App() {
 
   const [subjectInput, setSubjectInput] = useState('');
   const [results, setResults] = useState([]);
+  const [engine, setEngine] = useState('text-curie-001');
   
 
   async function getResponse(url, parameters) {
@@ -26,7 +27,7 @@ function App() {
   function onSubmit(event) {
     event.preventDefault();
 
-    const url = 'https://api.openai.com/v1/engines/text-curie-001/completions';
+    const url = `https://api.openai.com/v1/engines/${engine}/completions`;
     const parameters = {
       prompt: generatePrompt(subjectInput),
       temperature: 0.5,
@@ -54,6 +55,11 @@ function App() {
     return  goldenPrompt;
   }
  
+  function onRadioChange(event) {
+    console.log("radio change")
+    setEngine(event.target.value);
+    console.log(engine)
+  }
 
   return (
     <div className='page-container'>
@@ -69,6 +75,20 @@ function App() {
               maxLength="1000"
               onChange={(e) => setSubjectInput(e.target.value)}
             />
+
+            <p>Please select the engine:</p>
+            <input type="radio" id="text-curie-001" name="engine" value="text-curie-001" onChange={onRadioChange} checked/>
+            <label htmlFor="text-curie-001">text-curie-001</label>
+
+            <input type="radio" id="text-davinci-002" name="engine" value="text-davinci-002" onChange={onRadioChange}/>
+            <label htmlFor="text-davinci-002">text-davinci-002</label>
+
+            <input type="radio" id="text-babbage-001" name="engine" value="text-babbage-001" onChange={onRadioChange}/>
+            <label htmlFor="text-babbage-001">text-babbage-001</label>
+
+            <input type="radio" id="text-ada-001" name="engine" value="text-ada-001" onChange={onRadioChange}/>
+            <label htmlFor="text-ada-001">text-ada-001</label>
+
             <input type="submit" value="Generate Goldendoodle Poem" id="submit"/>
         </form>
         
