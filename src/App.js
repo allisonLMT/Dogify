@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import EngineRadio from './components/EngineRadio';
 import Results from './components/Results.js';
 import Footer from './components/Footer.js';
 import './index.scss';
@@ -7,7 +8,7 @@ function App() {
 
   const [subjectInput, setSubjectInput] = useState('');
   const [results, setResults] = useState([]);
-  const [engine, setEngine] = useState('text-curie-001');
+  const [selectedEngine, setSelectedEngine] = useState('text-curie-001');
   
 
   async function getResponse(url, parameters) {
@@ -26,8 +27,8 @@ function App() {
 
   function onSubmit(event) {
     event.preventDefault();
-
-    const url = `https://api.openai.com/v1/engines/${engine}/completions`;
+    console.log(selectedEngine)
+    const url = `https://api.openai.com/v1/engines/${selectedEngine}/completions`;
     const parameters = {
       prompt: generatePrompt(subjectInput),
       temperature: 0.5,
@@ -57,14 +58,13 @@ function App() {
  
   function onRadioChange(event) {
     console.log("radio change")
-    setEngine(event.target.value);
-    console.log(engine)
+    setSelectedEngine(event.target.value);
   }
 
   return (
     <div className='page-container'>
       <div className='content-wrap'>
-        <h1>Goldendoodle Poem Generator</h1>
+        <h1>Dogify</h1>
         <form onSubmit={onSubmit}>
             <input
               type="text"
@@ -72,24 +72,17 @@ function App() {
               placeholder="Enter an object"
               value={subjectInput}
               // API allows maxlength = 1000
-              maxLength="1000"
+              maxLength="100"
               onChange={(e) => setSubjectInput(e.target.value)}
             />
 
             <p>Please select the engine:</p>
-            <input type="radio" id="text-curie-001" name="engine" value="text-curie-001" onChange={onRadioChange} checked/>
-            <label htmlFor="text-curie-001">text-curie-001</label>
+            <EngineRadio engine='text-curie-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
+            <EngineRadio engine='text-davinci-002' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
+            <EngineRadio engine='text-babbage-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
+            <EngineRadio engine='text-ada-001' selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
 
-            <input type="radio" id="text-davinci-002" name="engine" value="text-davinci-002" onChange={onRadioChange}/>
-            <label htmlFor="text-davinci-002">text-davinci-002</label>
-
-            <input type="radio" id="text-babbage-001" name="engine" value="text-babbage-001" onChange={onRadioChange}/>
-            <label htmlFor="text-babbage-001">text-babbage-001</label>
-
-            <input type="radio" id="text-ada-001" name="engine" value="text-ada-001" onChange={onRadioChange}/>
-            <label htmlFor="text-ada-001">text-ada-001</label>
-
-            <input type="submit" value="Generate Goldendoodle Poem" id="submit"/>
+            <input type="submit" value="Dogify!" id="submit"/>
         </form>
         
           {results.length > 0 &&
