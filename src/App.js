@@ -38,7 +38,7 @@ function App() {
         .then(data => {
             //add a key value pair to store the prompt with it's result
             data.prompt = parameters.prompt;
-            console.log(data)
+            
             //takes the previous result array, and concats the new response, then updates the result state
             var updatedResults = results.concat(data)
             setResults(updatedResults);
@@ -46,13 +46,17 @@ function App() {
     }
 
     function generatePrompt(input) {
-        //takes the user input and generates a prompt to create a poem
-        const goldenPrompt = `Write a story about a Goldendoodle and ${input}`;
-        return  goldenPrompt;
+        //randomly select a dog breed from the list
+        const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog'];
+        const randomNum = Math.floor(Math.random()*breeds.length);
+        const randomBreed = breeds[randomNum]
+
+        //takes the user input and generates a prompt to create a story about the input and the selected breed
+        const dogPrompt = `Write a story about a ${randomBreed} and ${input}.`;
+        return  dogPrompt;
     }
 
     function onDropDownChange(event) {
-        console.log("dropdown change")
         setSelectedEngine(event.target.value);
     }
 
@@ -72,7 +76,7 @@ function App() {
                     onChange={(e) => setSubjectInput(e.target.value)}
                 />
                 <DropDown onDropDownChange={onDropDownChange} />
-                
+
                 <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
         
