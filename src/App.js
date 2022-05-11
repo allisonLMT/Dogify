@@ -49,8 +49,18 @@ function App() {
     function generatePrompt(input) {
         //randomly select a dog breed from the list
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog'];
-        const randomNum = Math.floor(Math.random()*breeds.length);
-        const randomBreed = breeds[randomNum]
+        const randomBreed = breeds[randomNum(breeds)]
+
+        const items = ['a green pencil sharpener', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and marshmallows', 'some unicycles and a clown', 'a pair of shoes', 'a cat and a toucan', 'some warm cookies and milk'];
+        const randomItem = items[randomNum(items)];
+
+        if (input === '') {
+            input = randomItem;
+        }
+
+        function randomNum(arr) {
+            return Math.floor(Math.random()*arr.length);
+        }
 
         //takes the user input and generates a prompt to create a story about the input and the selected breed
         const dogPrompt = `Write a story about a ${randomBreed} and ${input}.`;
@@ -63,14 +73,19 @@ function App() {
 
     return (
     <div className='page-container'>
-        {/* <div className='content-wrap'> */}
+        <div className='content-wrap'>
             <h1>Dogify!</h1>
+            <section>
+                <h2>What's Dogify?</h2>
+                <p>Dogify will write a story about a dog and whatever else you choose!</p>
+                <p>Not sure? Leave it blank and we'll fill it in. And don't worry, we'll pick a dog for you.</p>
+            </section>
             <form onSubmit={onSubmit}>
                 <input
                     type="text"
                     name="object"
                     id="textBox"
-                    placeholder="Enter an object"
+                    placeholder="enter your story items here..."
                     value={subjectInput}
                     // API allows maxlength = 1000
                     maxLength="100"
@@ -86,7 +101,7 @@ function App() {
                     <Results results={results} /> 
                 </section>
             }
-        {/* </div> */}
+        </div>
       <Footer />
     </div>
   );
