@@ -4,8 +4,9 @@ import OneResult from '../components/OneResult.js';
 
 function Results({ prompt, results }) {
 
-//results need to be displayed newest to oldest (need to make a copy of the array, reverse, then map it)
-console.log(results)
+    //reverse the array before mapping the results (needs to display newest to oldest)
+    
+    console.log(results)
 
     return (
         <section className={styles.results}>
