@@ -63,7 +63,7 @@ function App() {
 
     return (
     <div className='page-container'>
-        <div className='content-wrap'>
+        {/* <div className='content-wrap'> */}
             <h1>Dogify!</h1>
             <form onSubmit={onSubmit}>
                 <input
@@ -86,7 +86,7 @@ function App() {
                     <Results results={results} /> 
                 </section>
             }
-        </div>
+        {/* </div> */}
       <Footer />
     </div>
   );
