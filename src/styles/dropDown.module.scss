@@ -1,0 +1,17 @@
+@use '_variables' as *;
+
+#engineLabel {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+select {
+    font-size: 1.1rem;
+    padding: 3px;
+}
+
+option:hover {
+    filter: grayscale(1);
+}
