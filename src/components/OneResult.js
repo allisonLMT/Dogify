@@ -12,15 +12,15 @@ function OneResult({ result }) {
     return (
         <article className={styles.oneResult}>
             <section>
-                <h2>Prompt:</h2>
+                <h3>Prompt:</h3>
                 <p>{result.prompt}</p>
             </section>
             <section>
-                <h2>Response:</h2>
+                <h3>Response:</h3>
                 <p>{result.choices[0].text}</p>
             </section>
             <section>
-                <h2>Engine:</h2>
+                <h3>Engine:</h3>
                 <p>{formattedEngine}</p>
             </section>
         </article>

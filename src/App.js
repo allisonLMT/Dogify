@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from './components/Header.js';
 import DropDown from './components/DropDown';
 import Results from './components/Results.js';
 import Footer from './components/Footer.js';
@@ -48,7 +49,7 @@ function App() {
 
     function generatePrompt(input) {
         //randomly select a dog breed from the list
-        const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog'];
+        const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Boxer'];
         const randomBreed = breeds[randomNum(breeds)]
 
         const items = ['a green pencil sharpener', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and marshmallows', 'some unicycles and a clown', 'a pair of shoes', 'a cat and a toucan', 'some warm cookies and milk'];
@@ -74,8 +75,9 @@ function App() {
 
     return (
     <div className='page-container'>
+        <Header />
         <div className='content-wrap'>
-            <h1>Dogify!</h1>
+            
             <section class='intro'>
                 <h2>What's Dogify?</h2>
                 <p>Dogify will write a story about a dog and whatever else you choose!</p>
