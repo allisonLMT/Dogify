@@ -2,6 +2,9 @@
 @use '_mixins' as *;
 
 .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     outline: 6px solid $extraDarkGreen;
     border: 3px solid $darkGreen;
     position: 'absolute';
@@ -29,8 +32,10 @@
 }
 
 
-#close {
+#select {
     @include green-button;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 #settings {

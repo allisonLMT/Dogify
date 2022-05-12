@@ -81,6 +81,11 @@ function App() {
         setSelectedEngine(event.target.value);
     }
 
+    function onRadioChange(event) {
+        console.log("radio change");
+        setSelectedEngine(event.target.value);
+    }
+
     function randomNum(arr) {
         return Math.floor(Math.random()*arr.length);
     }
@@ -103,8 +108,8 @@ function App() {
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel'];
         const randomBreed = breeds[randomNum(breeds)];
         let prompts;
+
         if (userInput === '' || sanitizedInput === '') {
-            console.log("empty")
             //if there was no user input, pick a random item to use
             const item = shuffleItem();
             prompts = {
@@ -148,7 +153,7 @@ function App() {
                         <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
                     </div>
                     <div className='submitSettings'>
-                        <SettingsModal onDropDownChange={onDropDownChange}/>
+                        <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
                         <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
                     </div>
                 </section>

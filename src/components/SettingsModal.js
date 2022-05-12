@@ -1,11 +1,11 @@
 import React from 'react';
 import Modal from 'react-modal';
-import DropDown from '../components/DropDown';
+import RadioButton from '../components/RadioButton';
 import styles from '../styles/modal.module.scss';
 
 Modal.setAppElement('#root');
 
-function SettingsModal({ onDropDownChange }) {
+function SettingsModal({ selectedEngine, onRadioChange }) {
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -30,17 +30,13 @@ function SettingsModal({ onDropDownChange }) {
         <h2>Settings</h2>
         <section>
             <h3>Engines</h3>
-            <p>Dogify runs on OpenAI's API and there are four engines that can be used to create your story. Below are the differences.</p>
-            <ul>
-                <li>Curie: very capable, faster than DaVinci</li>
-                <li>DaVinci: most capable</li>
-                <li>Babbage: capable of straightforward tasks, very fast</li>
-                <li>Ada: capable of simple tasks, usually the fastest</li>
-            </ul>
-            <p>By default, Dogify runs on Curie but you may change it if you wish.</p>
-            <DropDown onDropDownChange={onDropDownChange}/>
+            <p>Dogify runs on OpenAI's API and you may choose your engine:</p>
+            <RadioButton engine='text-curie-001' description="Curie: very capable, faster than DaVinci" selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
+            <RadioButton engine='text-davinci-002' description="DaVinci: most capable" selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
+            <RadioButton engine='text-babbage-001' description="Babbage: capable of straightforward tasks, very fast" selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
+            <RadioButton engine='text-ada-001' description="Ada: capable of simple tasks, usually the fastest" selectedEngine={selectedEngine} onRadioChange={onRadioChange} />
         </section>
-        <button onClick={closeModal} id={styles.close} >close</button>
+        <button onClick={closeModal} id={styles.select} >select</button>
       </Modal>
     </div>
   );
