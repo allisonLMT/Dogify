@@ -24,9 +24,14 @@ function SettingsModal({ onDropDownChange }) {
     //   bottom: 'auto',
     //   marginRight: '-50%',
     //   transform: 'translate(-50%, -50%)',
-    inset: '1rem',
-      border: '2px solid red',
+        
+        inset: '1rem',
+        border: '2px solid black',
     },
+    overlay: {
+        //backgroundColor: 'red',
+        zIndex: '10',
+    }
   };
 
   return (

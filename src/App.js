@@ -24,6 +24,7 @@ function App() {
     }
 
     function onSubmit(event) {
+        console.log("submitted")
         event.preventDefault();
         const url = `https://api.openai.com/v1/engines/${selectedEngine}/completions`;
         const parameters = {
@@ -68,6 +69,7 @@ function App() {
     }
 
     function generatePrompt(userInput) {
+        console.log("generating prompt")
         //randomly select a dog breed from the list
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel'];
         const randomBreed = breeds[randomNum(breeds)];
@@ -80,6 +82,7 @@ function App() {
     }
 
     function onDropDownChange(event) {
+        console.log("dropdownchange")
         setSelectedEngine(event.target.value);
     }
 
@@ -92,8 +95,7 @@ function App() {
                 <p>Dogify will write a story about a dog and whatever else you choose!</p>
                 <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
             </section>
-            <form onSubmit={onSubmit}>
-            
+            <section>
                 <div className='textShuffle'>
                     <input
                         type="text"
@@ -109,9 +111,9 @@ function App() {
                 </div>
                 <div className='submitSettings'>
                     <SettingsModal onDropDownChange={onDropDownChange}/>
-                    <input type="submit" value="Dogify Now!" id="submit"/>
+                    <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
                 </div>
-            </form>
+            </section>
         
             {results.length > 0 &&
                 <section>
