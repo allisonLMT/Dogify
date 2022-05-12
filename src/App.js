@@ -7,7 +7,11 @@ import './index.scss';
 
 function App() {
 
-   
+    //keeps the content scrolled to the top as results are added (otherwise it scrolls under the header)
+    const el = document.getElementById("content-wrap");
+    if (el !== null) {
+        el.scrollTo = 0;
+    }
 
     //input from text field
     const [userInput, setUserInput] = useState('');
@@ -125,7 +129,7 @@ function App() {
     return (
     <div className='page-container'>
         <Header />
-        <div className='content-wrap'>
+        <div id='content-wrap'>
             <section className='intro'>
                 <h2>What's Dogify?</h2>
                 <p>Dogify will write a story about a dog and whatever else you choose!</p>

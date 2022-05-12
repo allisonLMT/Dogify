@@ -10,11 +10,13 @@ body {
 
 .page-container {
     position: relative;
-    min-height: calc(100vh - 50px);
+    min-height: 100vh;
+    border: 1px solid red;
+   
   
 }
-.content-wrap {
-    margin: 100px auto 0;
+#content-wrap {
+    margin: 110px auto 0;
 
   //border: 1px solid blue;
 }
