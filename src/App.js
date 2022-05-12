@@ -21,8 +21,6 @@ function App() {
     const [results, setResults] = useState([]);
     //engine selected from settings modal
     const [selectedEngine, setSelectedEngine] = useState('text-curie-001');
-
-    //const [prompts, setPrompts] = useState({})
   
     async function getResponse(url, parameters) {
         const response = await fetch(url, {
@@ -127,44 +125,42 @@ function App() {
     
 
     return (
-    <div className='page-container'>
-        <Header />
-        <div id='content-wrap'>
-            <section className='intro'>
-                <h2>What's Dogify?</h2>
-                <p>Dogify will write a story about a dog and whatever else you choose!</p>
-                <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
-            </section>
-            <section className='form'>
-                <div className='textShuffle'>
-                    <input
-                        type="text"
-                        name="object"
-                        id="textBox"
-                        placeholder="enter your story items here..."
-                        value={userInput}
-                        // API allows maxlength = 1000
-                        maxLength="100"
-                        // onChange={(e) => setUserInput(e.target.value)}
-                        onChange={(e) => handleInput(e)}
-                    />
-                    <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
-                </div>
-                <div className='submitSettings'>
-                    <SettingsModal onDropDownChange={onDropDownChange}/>
-                    {/* <input type="submit" value="Dogify Now!" id="submit" onClick={handleInput}/> */}
-                    <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
-                </div>
-            </section>
-        
-            {results.length > 0 &&
-                <section>
-                    <Results results={results} /> 
+        <div className='page-container'>
+            <Header />
+            <div id='content-wrap'>
+                <section className='intro'>
+                    <h2>What's Dogify?</h2>
+                    <p>Dogify will write a story about a dog and whatever else you choose!</p>
+                    <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
                 </section>
-            }
+                <section className='form'>
+                    <div className='textShuffle'>
+                        <input
+                            type="text"
+                            name="object"
+                            id="textBox"
+                            placeholder="enter your story items here..."
+                            value={userInput}
+                            // API allows maxlength = 1000
+                            maxLength="100"
+                            onChange={(e) => handleInput(e)}
+                        />
+                        <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
+                    </div>
+                    <div className='submitSettings'>
+                        <SettingsModal onDropDownChange={onDropDownChange}/>
+                        <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
+                    </div>
+                </section>
+            
+                {results.length > 0 &&
+                    <section>
+                        <Results results={results} /> 
+                    </section>
+                }
+            </div>
+            <Footer />
         </div>
-      <Footer />
-    </div>
   );
 }
 
