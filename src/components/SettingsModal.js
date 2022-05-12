@@ -19,7 +19,7 @@ function SettingsModal({ onDropDownChange }) {
 
   return (
     <div>
-      <button onClick={openModal} className="material-icons">settings</button>
+      <button onClick={openModal} className="material-icons" id={styles.settings}>settings</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

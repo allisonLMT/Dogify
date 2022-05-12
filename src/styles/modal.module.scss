@@ -9,7 +9,6 @@
     left: 40px;
     right: 40px;
     bottom: 40px;
-    
     background: #fff;
     overflow: auto;
     border-radius: 4px;
@@ -34,4 +33,6 @@
     @include green-button;
 }
 
-
+#settings {
+    @include translucent-button;
+}

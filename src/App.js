@@ -148,7 +148,7 @@ function App() {
                         // onChange={(e) => setUserInput(e.target.value)}
                         onChange={(e) => handleInput(e)}
                     />
-                    <button className="material-icons" onClick={shuffleItem}>shuffle</button>
+                    <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
                 </div>
                 <div className='submitSettings'>
                     <SettingsModal onDropDownChange={onDropDownChange}/>
