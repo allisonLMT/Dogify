@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import DropDown from '../components/DropDown';
+import styles from '../styles/modal.module.scss';
 
 Modal.setAppElement('#root');
 
@@ -16,34 +17,16 @@ function SettingsModal({ onDropDownChange }) {
     setIsOpen(false);
   }
 
-  const customStyles = {
-    content: {
-    //   top: '50%',
-    //   left: '50%',
-    //   right: 'auto',
-    //   bottom: 'auto',
-    //   marginRight: '-50%',
-    //   transform: 'translate(-50%, -50%)',
-        
-        inset: '1rem',
-        border: '2px solid black',
-    },
-    overlay: {
-        //backgroundColor: 'red',
-        zIndex: '10',
-    }
-  };
-
   return (
     <div>
       <button onClick={openModal} className="material-icons">settings</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
+        contentLabel="Settings"
+        className={styles.content}
+        overlayClassName={styles.overlay}
       >
-      
         <h2>Settings</h2>
         <section>
             <h3>Engines</h3>
@@ -57,7 +40,7 @@ function SettingsModal({ onDropDownChange }) {
             <p>By default, Dogify runs on Curie but you may change it if you wish.</p>
             <DropDown onDropDownChange={onDropDownChange}/>
         </section>
-        <button onClick={closeModal}>close</button>
+        <button onClick={closeModal} id={styles.close} >close</button>
       </Modal>
     </div>
   );

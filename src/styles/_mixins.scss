@@ -1,0 +1,36 @@
+@use '_variables' as *;
+
+// Green Button
+@mixin green-button {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin: 2rem 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1;
+    border: none;
+    border-radius: 5px;
+    background-color: $extraDarkGreen;
+    filter: drop-shadow(2px 2px 2px darkgrey);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:hover,
+    &:focus {
+    background-color: $darkGreen;
+    color: black;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+
+
+
+// Translucent Button 
