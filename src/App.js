@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Header from './components/Header.js';
-import SettingsModal from './components/SettingsModal.js';
-import DropDown from './components/DropDown.js';
-import Results from './components/Results.js';
-import Footer from './components/Footer.js';
+import Header from './components/Header';
+import SettingsModal from './components/SettingsModal';
+import Results from './components/Results';
+import Footer from './components/Footer';
 import './index.scss';
 
 function App() {
@@ -78,7 +77,6 @@ function App() {
     <div className='page-container'>
         <Header />
         <div className='content-wrap'>
-            
             <section class='intro'>
                 <h2>What's Dogify?</h2>
                 <p>Dogify will write a story about a dog and whatever else you choose!</p>
@@ -95,10 +93,7 @@ function App() {
                     maxLength="100"
                     onChange={(e) => setSubjectInput(e.target.value)}
                 />
-                <SettingsModal />
-                <DropDown onDropDownChange={onDropDownChange} />
-                
-
+                <SettingsModal onDropDownChange={onDropDownChange}/>
                 <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
         

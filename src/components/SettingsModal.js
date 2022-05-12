@@ -1,9 +1,9 @@
-import { getQueriesForElement } from '@testing-library/react';
 import React from 'react';
 import Modal from 'react-modal';
+import DropDown from '../components/DropDown';
 
 
-function SettingsModal() {
+function SettingsModal({ onDropDownChange }) {
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -49,7 +49,7 @@ function SettingsModal() {
                 <li>Ada: capable of simple tasks, usually the fastest</li>
             </ul>
             <p>By default, Dogify runs on Curie but you may change it if you wish.</p>
-
+            <DropDown onDropDownChange={onDropDownChange}/>
         </section>
         <button onClick={closeModal}>close</button>
       </Modal>
