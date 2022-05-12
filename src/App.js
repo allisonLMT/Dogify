@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from './components/Header.js';
-import DropDown from './components/DropDown';
+import SettingsModal from './components/SettingsModal.js';
+import DropDown from './components/DropDown.js';
 import Results from './components/Results.js';
 import Footer from './components/Footer.js';
 import './index.scss';
@@ -94,8 +95,9 @@ function App() {
                     maxLength="100"
                     onChange={(e) => setSubjectInput(e.target.value)}
                 />
+                <SettingsModal />
                 <DropDown onDropDownChange={onDropDownChange} />
-                <i class="material-icons">settings</i>
+                
 
                 <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
