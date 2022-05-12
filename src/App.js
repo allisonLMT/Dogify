@@ -71,7 +71,7 @@ function App() {
             var updatedResults = results.concat(data).reverse();
             setResults(updatedResults);
         });
-       
+        setSanitizedInput('');
     }
 
     function onDropDownChange(event) {
@@ -101,7 +101,7 @@ function App() {
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel'];
         const randomBreed = breeds[randomNum(breeds)];
         let prompts;
-        if (userInput === '' && sanitizedInput === '') {
+        if (userInput === '' || sanitizedInput === '') {
             console.log("empty")
             //if there was no user input, pick a random item to use
             const item = shuffleItem();
