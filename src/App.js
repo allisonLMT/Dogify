@@ -134,7 +134,10 @@ function App() {
             <Header />
             <div id='content-wrap'>
                 <section className='intro'>
-                    <h2>What's Dogify?</h2>
+                    <div className='titleSettings'>
+                        <h2>What's Dogify?</h2>
+                        <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
+                    </div>
                     <p>Dogify will write a story about a dog and whatever else you choose!</p>
                     <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
                 </section>
@@ -153,7 +156,7 @@ function App() {
                         <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
                     </div>
                     <div className='submitSettings'>
-                        <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
+                        {/* <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/> */}
                         <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
                     </div>
                 </section>

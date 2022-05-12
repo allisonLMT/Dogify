@@ -22,10 +22,7 @@ body {
   //border: 1px solid blue;
 }
 
-h2 {
-    margin-block-start: 0.5rem;
-    margin-block-end: 0.25rem;
-}
+
 
 p {
     margin-block-start: 0.5rem;
@@ -35,6 +32,19 @@ p {
 .form {
     margin: 0 1rem;
     text-align: left;
+}
+
+.titleSetting {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h2 {
+        display: block;
+        width: 200px;
+        margin-block-start: 0.5rem;
+        margin-block-end: 0.25rem;
+    }
 }
 
 .textShuffle {
@@ -53,8 +63,10 @@ p {
 
 .submitSettings {
     //border: 1px solid red;
+    //could possibly get rid of this wrapping div now that settings has moved
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #submit {

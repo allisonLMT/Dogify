@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Fragment }from 'react';
 import Modal from 'react-modal';
 import RadioButton from '../components/RadioButton';
-import styles from '../styles/modal.module.scss';
+import styles from '../styles/settingsModal.module.scss';
 
 Modal.setAppElement('#root');
 
@@ -18,7 +18,7 @@ function SettingsModal({ selectedEngine, onRadioChange }) {
   }
 
   return (
-    <div>
+    <>
       <button onClick={openModal} className="material-icons" id={styles.settings}>settings</button>
       <Modal
         isOpen={modalIsOpen}
@@ -38,7 +38,7 @@ function SettingsModal({ selectedEngine, onRadioChange }) {
         </section>
         <button onClick={closeModal} id={styles.select} >select</button>
       </Modal>
-    </div>
+    </>
   );
 
 }
