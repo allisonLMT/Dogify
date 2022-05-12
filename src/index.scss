@@ -11,11 +11,10 @@ body {
 .page-container {
     position: relative;
     min-height: calc(100vh - 50px);
-  //border: 1px solid red;
   
 }
 .content-wrap {
-    margin: 0 auto;
+    margin: 125px auto 0;
 
   //border: 1px solid blue;
 }
@@ -35,22 +34,32 @@ form {
     text-align: left;
 }
 
+.textShuffle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 #textBox {
-    width: 275px;
+    width: 240px;
     padding: 5px;
     font-size: 1.2rem;
     border: 1px solid $darktext;
     border-radius: 3px;
 }
 
-
+.submitSettings {
+    //border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
 
 /* Buttons styles start */
 // https://css-tricks.com/overriding-default-button-styles/
 #submit {
-    display: block;
+    display: inline-block;
     padding: 1rem 1.5rem;
-    margin: 2rem auto 1rem;
+    margin: 2rem 1rem;
     text-decoration: none;
     color: white;
     font-size: 1.3rem;

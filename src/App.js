@@ -45,20 +45,20 @@ function App() {
             var updatedResults = results.concat(data).reverse();
             setResults(updatedResults);
         });
+       
     }
 
     function randomNum(arr) {
         return Math.floor(Math.random()*arr.length);
     }
 
-    function selectItem(userInput) {
+    function shuffleItem(userInput) {
         const items = ['a green pencil sharpener', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and marshmallows', 'some unicycles and a clown', 'a pair of shoes', 'a cat and a toucan', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with mustard'];
-        const randomItem = items[randomNum(items)];
         console.log("selecting items")
         var item;
         //if the user hasn't added input, use a random item instead
         if (userInput === '') {
-            item = randomItem;
+            item = items[randomNum(items)];
             setUserInput(item);
         } else {
             return userInput;
@@ -72,7 +72,7 @@ function App() {
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel'];
         const randomBreed = breeds[randomNum(breeds)];
 
-        const input = selectItem(userInput);
+        const input = shuffleItem(userInput);
 
         //takes the user input and generates a prompt to create a story about the input and the selected breed
         const dogPrompt = `Write a story about a ${randomBreed} and ${input}.`;
@@ -90,23 +90,27 @@ function App() {
             <section className='intro'>
                 <h2>What's Dogify?</h2>
                 <p>Dogify will write a story about a dog and whatever else you choose!</p>
-                <p>Not sure? Leave it blank and we'll fill it in. And don't worry, we'll pick a dog for you.</p>
+                <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
             </section>
-            {/* <form onSubmit={onSubmit}> */}
-            <form>
-                <input
-                    type="text"
-                    name="object"
-                    id="textBox"
-                    placeholder="enter your story items here..."
-                    value={userInput}
-                    // API allows maxlength = 1000
-                    maxLength="100"
-                    onChange={(e) => setUserInput(e.target.value)}
-                />
-                <button className="material-icons" onClick={selectItem}>shuffle</button>
-                <SettingsModal onDropDownChange={onDropDownChange}/>
-                <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
+            <form onSubmit={onSubmit}>
+            
+                <div className='textShuffle'>
+                    <input
+                        type="text"
+                        name="object"
+                        id="textBox"
+                        placeholder="enter your story items here..."
+                        value={userInput}
+                        // API allows maxlength = 1000
+                        maxLength="100"
+                        onChange={(e) => setUserInput(e.target.value)}
+                    />
+                    <button className="material-icons" onClick={shuffleItem}>shuffle</button>
+                </div>
+                <div className='submitSettings'>
+                    <SettingsModal onDropDownChange={onDropDownChange}/>
+                    <input type="submit" value="Dogify Now!" id="submit"/>
+                </div>
             </form>
         
             {results.length > 0 &&
