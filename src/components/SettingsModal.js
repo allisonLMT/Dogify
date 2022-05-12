@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import DropDown from '../components/DropDown';
 
+Modal.setAppElement('#root');
 
 function SettingsModal({ onDropDownChange }) {
 

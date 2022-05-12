@@ -1,5 +1,13 @@
+@use '_variables' as *;
+
 .header {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    display: block;
+    background-color: $mediumGreen;
+    width: 100%;
+
 }
 
 h1 {
