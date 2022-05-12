@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Header from './components/Header.js';
-import DropDown from './components/DropDown';
-import Results from './components/Results.js';
-import Footer from './components/Footer.js';
+import Header from './components/Header';
+import SettingsModal from './components/SettingsModal';
+import Results from './components/Results';
+import Footer from './components/Footer';
 import './index.scss';
 
 function App() {
@@ -77,7 +77,6 @@ function App() {
     <div className='page-container'>
         <Header />
         <div className='content-wrap'>
-            
             <section class='intro'>
                 <h2>What's Dogify?</h2>
                 <p>Dogify will write a story about a dog and whatever else you choose!</p>
@@ -94,9 +93,8 @@ function App() {
                     maxLength="100"
                     onChange={(e) => setSubjectInput(e.target.value)}
                 />
-                <DropDown onDropDownChange={onDropDownChange} />
-                <i class="material-icons">settings</i>
-
+                {/* add shuffle icon here */}
+                <SettingsModal onDropDownChange={onDropDownChange}/>
                 <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
         
