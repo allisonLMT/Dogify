@@ -10,67 +10,70 @@ body {
 }
 
 .page-container {
-    position: relative;
-    min-height: 100vh;
+   position: relative;
+   min-height: 100vh;
     border: 1px solid red;
    
   
 }
 #content-wrap {
-    margin: 110px auto 0;
+    margin: 110px 1rem 0;
 
   //border: 1px solid blue;
 }
-
-
 
 p {
     margin-block-start: 0.5rem;
 }
 
-.intro,
-.form {
-    margin: 0 1rem;
+.intro {
     text-align: left;
 }
 
-.titleSetting {
+.titleSettings {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 
     h2 {
         display: block;
         width: 200px;
         margin-block-start: 0.5rem;
         margin-block-end: 0.25rem;
-    }
+    }    
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .textShuffle {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
+// textarea {
+//     resize: vertical;
+//     display: block;
+//     width: 200px;
+//     max-width: 200px;
+   
+// }
+
 #textBox {
-    width: 240px;
+    width: 225px;
     padding: 5px;
     font-size: 1.2rem;
     border: 1px solid $darktext;
     border-radius: 3px;
 }
 
-.submitSettings {
-    //border: 1px solid red;
-    //could possibly get rid of this wrapping div now that settings has moved
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #submit {
     @include green-button;
+    
 }
 
 #shuffle {

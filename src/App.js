@@ -145,20 +145,19 @@ function App() {
                     <div className='textShuffle'>
                         <input
                             type="text"
+                            // rows="3"
+                            // col="15"
                             name="object"
                             id="textBox"
                             placeholder="enter your story items here..."
                             value={userInput}
                             // API allows maxlength = 1000
-                            maxLength="100"
+                            maxLength="400"
                             onChange={(e) => handleInput(e)}
                         />
                         <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
                     </div>
-                    <div className='submitSettings'>
-                        {/* <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/> */}
-                        <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
-                    </div>
+                    <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
                 </section>
             
                 {results.length > 0 &&
