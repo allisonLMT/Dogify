@@ -48,10 +48,8 @@ function App() {
 
     function onSubmit() {
         console.log("submitted")
-        
+       
         const prompts = generatePrompts();
-        console.log("sanitized: " + sanitizedInput)
-        console.log(prompts)
 
         const url = `https://api.openai.com/v1/engines/${selectedEngine}/completions`;
         const parameters = {
@@ -86,13 +84,14 @@ function App() {
     }
 
     function shuffleItem() {
-        const items = ['a green pencil sharpener', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and marshmallows', 'a pair of shoes', 'a cat and a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup and relish', 'an apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book'];
+        const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'a cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup and relish', 'an apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip'];
         console.log("shuffling items")
 
         const item = items[randomNum(items)];
         setUserInput(item);
         setSanitizedInput(item);
 
+        return item;
     }
 
     function generatePrompts() {
@@ -101,11 +100,21 @@ function App() {
         //randomly select a dog breed from the list
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel'];
         const randomBreed = breeds[randomNum(breeds)];
-       
-        //generate two prompts with sanitizedInput and with userInput as-is (this is used for the stored prompt)
-        const prompts = {
-            sanitized: `Write a story about a ${randomBreed} and ${sanitizedInput}.`,
-            asIs: `Write a story about a ${randomBreed} and ${userInput}.`,
+        let prompts;
+        if (userInput === '' && sanitizedInput === '') {
+            console.log("empty")
+            //if there was no user input, pick a random item to use
+            const item = shuffleItem();
+            prompts = {
+                sanitized: `Write a story about a ${randomBreed} and ${item}.`,
+                asIs: `Write a story about a ${randomBreed} and ${item}.`,
+            }
+        } else {      
+            //generate two prompts with sanitizedInput and with userInput as-is (this is used for the stored prompt)
+            prompts = {
+                sanitized: `Write a story about a ${randomBreed} and ${sanitizedInput}.`,
+                asIs: `Write a story about a ${randomBreed} and ${userInput}.`,
+            }
         }
        
         return  prompts;
