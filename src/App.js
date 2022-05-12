@@ -93,6 +93,7 @@ function App() {
                     maxLength="100"
                     onChange={(e) => setSubjectInput(e.target.value)}
                 />
+                {/* add shuffle icon here */}
                 <SettingsModal onDropDownChange={onDropDownChange}/>
                 <input type="submit" value="Dogify Now!" id="submit"/>
             </form>
