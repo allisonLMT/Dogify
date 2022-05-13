@@ -7,17 +7,17 @@ function RadioButton({ engine, description, selectedEngine, onRadioChange }) {
 
     return (
         
-            <label htmlFor={engine} className={styles.radioLabel}>
-                <input 
-                type="radio" 
-                id={engine} 
-                name="engine" 
-                value={engine} 
-                onChange={onRadioChange} 
-                checked={selectedEngine === engine}
-                />
-                {description}
-            </label>
+        <label htmlFor={engine} className={styles.radioLabel}>
+            <input 
+            type="radio" 
+            id={engine} 
+            name="engine" 
+            value={engine} 
+            onChange={onRadioChange} 
+            checked={selectedEngine === engine}
+            />
+            {description}
+        </label>
         
     )
 }

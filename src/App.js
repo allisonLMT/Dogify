@@ -142,17 +142,15 @@ function App() {
                     <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
                 </section>
                 <section className='form'>
-                    <div className='textShuffle'>
+                    <div className='labelShuffle'>
                         <label htmlFor="items">Add something to the story:</label>
                         <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
                     </div>
                     <input
                         type="text"
-                        //rows="3"
-                        //col="15"
                         name="items"
                         id="textBox"
-                        placeholder="or take your chances..."
+                        placeholder="or leave it to us..."
                         value={userInput}
                         // API allows maxlength = 1000
                         maxLength="200"
