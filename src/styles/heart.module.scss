@@ -8,8 +8,10 @@
 
 .fav {
     fill: $darkGreen;
+    filter: drop-shadow(2px 2px 2px darkgrey)
 }
 
 .notFav {
     fill: darkgrey;
+    filter: drop-shadow(2px 2px 2px darkgrey)
 }
