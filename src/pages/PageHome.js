@@ -3,7 +3,8 @@ import NavMenu from '../components/NavMenu';
 import SettingsModal from '../components/SettingsModal';
 import Results from '../components/Results';
 import Footer from '../components/Footer';
-import '../index.scss';
+import classes from 'classnames';
+import styles from '../styles/pageHome.module.scss';
 
 function PageHome() {
 
@@ -133,23 +134,23 @@ function PageHome() {
             <NavMenu page={'home'}/>
             <div id='content-wrap'>
                 <div className='main-content'>
-                    <section className='intro'>
-                        <div className='titleSettings'>
+                    <section className={styles.intro}>
+                        <div className={styles.titleSettings}>
                             <h2>What's Dogify?</h2>
                             <SettingsModal onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
                         </div>
                         <p>Dogify will write a story about a dog and whatever else you choose!</p>
                         <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
                     </section>
-                    <section className='form'>
-                        <div className='labelShuffle'>
+                    <section className={styles.form}>
+                        <div className={styles.labelShuffle}>
                             <label htmlFor="items">Add something to the story:</label>
-                            <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
+                            <button className={ classes ("material-icons", styles.shuffle)} onClick={shuffleItem}>shuffle</button>
                         </div>
                         <input
                             type="text"
                             name="items"
-                            id="textBox"
+                            className={styles.textBox}
                             placeholder="or leave it to us..."
                             value={userInput}
                             // API allows maxlength = 1000
@@ -157,7 +158,7 @@ function PageHome() {
                             onChange={(e) => handleInput(e)}
                         />
                         
-                        <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
+                        <input type="submit" value="Dogify Now!" className={styles.submit} onClick={onSubmit}/>
                     </section>
                 </div>
                 {results.length > 0 &&

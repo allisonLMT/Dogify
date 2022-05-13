@@ -1,0 +1,54 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.intro {
+    text-align: left;
+}
+
+.titleSettings {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+        display: block;
+        width: 12.5rem;
+        margin-block-start: 0.5rem;
+        margin-block-end: 0.25rem;
+    }    
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    label {
+        width: 100%;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
+}
+
+.labelShuffle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.textBox {
+    width: 100%;
+    padding: 0.3125rem;
+    font-size: 1.2rem;
+    border: 0.0625rem solid $darktext;
+    border-radius: 0.1875rem;
+}
+
+.submit {
+    @include green-button;
+}
+
+.shuffle {
+    @include translucent-button;
+}
