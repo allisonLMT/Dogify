@@ -57,4 +57,16 @@ function findFavorite(result) {
     return resultIndex;
 }
 
-export { addFavorite, removeFavorite, findFavorite };
+function getFavorites() {
+
+    var storedFaves = localStorage.getItem('favResults');
+
+    if ( storedFaves === null) {
+        return [];
+    } else {
+        storedFaves = JSON.parse(storedFaves);
+        return storedFaves;
+    }
+}
+
+export { addFavorite, removeFavorite, findFavorite, getFavorites };
