@@ -13,7 +13,6 @@ function addFavorite(result) {
     //stringify the array and add to local storage
     localStorage.setItem( 'favResults' , JSON.stringify(favResults) );
 
-    findFavorite(result)
 }
 
 function removeFavorite(result) {
@@ -53,4 +52,4 @@ function findFavorite(result) {
     return resultIndex;
 }
 
-export { addFavorite, removeFavorite };
+export { addFavorite, removeFavorite, findFavorite };
