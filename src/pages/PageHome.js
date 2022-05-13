@@ -132,7 +132,7 @@ function PageHome() {
     return (
         <div className='page-container'>
             <NavMenu page={'home'}/>
-            <div id='content-wrap'>
+            <div className='content-wrap'>
                 <div className='main-content'>
                     <section className={styles.intro}>
                         <div className={styles.titleSettings}>

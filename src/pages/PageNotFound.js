@@ -10,8 +10,8 @@ function PageNotFound () {
         <div className='page-container'>
             <NavMenu />
                 <div className='content-wrap'>
-                    {/* <h2 className={styles.notFound}>404 Error</h2>
-                    <h3 className={styles.notFound}>Page not found.</h3> */}
+                    <h2 className={styles.notFound}>404 Error</h2>
+                    <h3 className={styles.notFound}>Page not found.</h3>
                 </div>
             <Footer />
             
