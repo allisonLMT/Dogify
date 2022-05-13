@@ -17,29 +17,34 @@ function addFavorite(result) {
 
 function removeFavorite(result) {
     console.log("removing from fav")
-    //to remove from favorites, first need to find it in the array
 
-    //turn local storage back to an array
+    //get the results from local storage, and turn back to an array
+    var storageFavs = JSON.parse(localStorage.getItem('favResults'));
 
     //find the index of the result in the array
     const index = findFavorite(result);
 
     //use the index to remove the result from the array
+    storageFavs.splice(index, 1);
 
-    //stringify the array and put it back into storage
+    //set favResults to match
+    favResults = storageFavs;
 
+    //stringify the altered array and put it back into storage
+    localStorage.setItem( 'favResults' , JSON.stringify(favResults) );
 }
+
 
 function findFavorite(result) {
     
-    //get the results from storage
+    //get the Favorites from storage
     var storageFavs = localStorage.getItem('favResults');
 
     if (storageFavs === null) {
         return -1;
     }
 
-    //turn it back into an array
+    //turn Favorites back into an array
     storageFavs = JSON.parse(storageFavs);
 
     //search the array for the object that matches 'result'
@@ -48,7 +53,7 @@ function findFavorite(result) {
     function isInFavs(obj) {
         return obj.id === result.id;
     }
-    console.log(resultIndex)
+
     return resultIndex;
 }
 
