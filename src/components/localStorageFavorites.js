@@ -1,0 +1,60 @@
+//will need functions to add to faves and remove
+//will need a way to tell if it's in faves (so the heart can conditionally render)
+
+// Store the fav result in the array before moving them to local storage
+var favResults = [];
+
+function addFavorite(result) {
+    console.log("adding to fav")
+
+    //push the result into the array
+    favResults.push(result);
+
+    //stringify the array and add to local storage
+    localStorage.setItem( 'favResults' , JSON.stringify(favResults) );
+
+}
+
+function removeFavorite(result) {
+    console.log("removing from fav")
+
+    //get the results from local storage, and turn back to an array
+    var storageFavs = JSON.parse(localStorage.getItem('favResults'));
+
+    //find the index of the result in the array
+    const index = findFavorite(result);
+
+    //use the index to remove the result from the array
+    storageFavs.splice(index, 1);
+
+    //set favResults to match
+    favResults = storageFavs;
+
+    //stringify the altered array and put it back into storage
+    localStorage.setItem( 'favResults' , JSON.stringify(favResults) );
+}
+
+
+function findFavorite(result) {
+    
+    //get the Favorites from storage
+    var storageFavs = localStorage.getItem('favResults');
+
+    if (storageFavs === null) {
+        return -1;
+    }
+
+    //turn Favorites back into an array
+    storageFavs = JSON.parse(storageFavs);
+
+    //search the array for the object that matches 'result'
+    const resultIndex = storageFavs.findIndex(isInFavs);
+
+    function isInFavs(obj) {
+        return obj.id === result.id;
+    }
+
+    return resultIndex;
+}
+
+export { addFavorite, removeFavorite, findFavorite };

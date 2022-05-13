@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/oneResult.module.scss';
+import Heart from '../components/Heart';
 
 function OneResult({ result }) {
 
@@ -11,6 +12,7 @@ function OneResult({ result }) {
 
     return (
         <article className={styles.oneResult}>
+            <Heart result={result} />
             <section>
                 <h3>Prompt:</h3>
                 <p>{result.prompt}</p>

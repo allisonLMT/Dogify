@@ -76,10 +76,10 @@ function App() {
         setSanitizedInput('');
     }
 
-    function onDropDownChange(event) {
-        console.log("dropdownchange")
-        setSelectedEngine(event.target.value);
-    }
+    // function onDropDownChange(event) {
+    //     console.log("dropdownchange")
+    //     setSelectedEngine(event.target.value);
+    // }
 
     function onRadioChange(event) {
         console.log("radio change");
@@ -93,7 +93,6 @@ function App() {
 
     function shuffleItem() {
         const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup', 'apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip', 'a capybara in an intertube'];
-        console.log("shuffling items")
 
         const item = items[randomNum(items)];
         setUserInput(item);
@@ -103,7 +102,6 @@ function App() {
     }
 
     function generatePrompts() {
-        console.log("generating prompt")
 
         //randomly select a dog breed from the list
         const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel'];
@@ -138,7 +136,7 @@ function App() {
                     <section className='intro'>
                         <div className='titleSettings'>
                             <h2>What's Dogify?</h2>
-                            <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
+                            <SettingsModal onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
                         </div>
                         <p>Dogify will write a story about a dog and whatever else you choose!</p>
                         <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
