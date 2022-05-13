@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Header from './components/Header';
-import SettingsModal from './components/SettingsModal';
-import Results from './components/Results';
-import Footer from './components/Footer';
-import './index.scss';
+import Header from '../components/Header';
+import SettingsModal from '../components/SettingsModal';
+import Results from '../components/Results';
+import Footer from '../components/Footer';
+import '../index.scss';
 
-function App() {
+function PageHome() {
 
     //keeps the content scrolled to the top as results are added (otherwise it scrolls under the header)
     const el = document.getElementById("content-wrap");
@@ -171,4 +171,4 @@ function App() {
   );
 }
 
-export default App;
+export default PageHome;
