@@ -143,20 +143,22 @@ function App() {
                 </section>
                 <section className='form'>
                     <div className='textShuffle'>
-                        <input
-                            type="text"
-                            // rows="3"
-                            // col="15"
-                            name="object"
-                            id="textBox"
-                            placeholder="enter your story items here..."
-                            value={userInput}
-                            // API allows maxlength = 1000
-                            maxLength="400"
-                            onChange={(e) => handleInput(e)}
-                        />
+                        <label htmlFor="items">Add something to the story:</label>
                         <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
                     </div>
+                    <input
+                        type="text"
+                        //rows="3"
+                        //col="15"
+                        name="items"
+                        id="textBox"
+                        placeholder="or take your chances..."
+                        value={userInput}
+                        // API allows maxlength = 1000
+                        maxLength="200"
+                        onChange={(e) => handleInput(e)}
+                    />
+                    
                     <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
                 </section>
             

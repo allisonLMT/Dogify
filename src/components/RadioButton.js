@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styles from '../styles/radioButton.module.scss';
 
 
@@ -6,8 +6,8 @@ function RadioButton({ engine, description, selectedEngine, onRadioChange }) {
 
 
     return (
-        <>
-            <label htmlFor={engine}>
+        
+            <label htmlFor={engine} className={styles.radioLabel}>
                 <input 
                 type="radio" 
                 id={engine} 
@@ -18,7 +18,7 @@ function RadioButton({ engine, description, selectedEngine, onRadioChange }) {
                 />
                 {description}
             </label>
-        </>
+        
     )
 }
 

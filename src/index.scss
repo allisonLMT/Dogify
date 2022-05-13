@@ -47,24 +47,30 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    label {
+        width: 100%;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
 }
 
 .textShuffle {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
-// textarea {
-//     resize: vertical;
-//     display: block;
-//     width: 200px;
-//     max-width: 200px;
+textarea {
+    resize: vertical;
+    display: block;
+    width: 80%;
    
-// }
+ }
 
 #textBox {
-    width: 225px;
+    width: 100%;
     padding: 5px;
     font-size: 1.2rem;
     border: 1px solid $darktext;
