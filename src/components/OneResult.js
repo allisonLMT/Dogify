@@ -16,7 +16,7 @@ function OneResult({ result }) {
                 <p>{result.prompt}</p>
             </section>
             <section>
-                <h3>Response:</h3>
+                <h3>Story:</h3>
                 <p>{result.choices[0].text}</p>
             </section>
             <section>
