@@ -12,7 +12,7 @@ function OneResult({ result }) {
 
     return (
         <article className={styles.oneResult}>
-            <Heart />
+            <Heart result={result} />
             <section>
                 <h3>Prompt:</h3>
                 <p>{result.prompt}</p>
