@@ -20,8 +20,12 @@ function Heart({ result, updateLocalFaves }) {
             removeFavorite(result);
             setFavorite(-1)
         }
-        //when a heart is clicked, update the 
-        updateLocalFaves(getFavorites());
+        //when a heart is clicked, update the the localFaves (state on PageFavorites)
+        if (updateLocalFaves !== undefined) {
+            //when clicking on a Heart on the homepage, updateLocalFaves is undefined since the fnc is passed from PageFavorites down the chain to Heart. 
+            //Only updateLocalFaves when on the Favorites page. (Does not need to be updated while on Home, since the the local faves are only used to render the list on the Favorites Page. It will update itself upon load.)
+            updateLocalFaves(getFavorites());
+        }
     }
 
     return (
