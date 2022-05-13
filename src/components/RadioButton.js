@@ -2,11 +2,10 @@ import React from 'react';
 import styles from '../styles/radioButton.module.scss';
 
 
-function RadioButton({ engine, description, selectedEngine, onRadioChange }) {
+function RadioButton({ engine, engineName, description, selectedEngine, onRadioChange }) {
 
 
     return (
-        
         <label htmlFor={engine} className={styles.radioLabel}>
             <input 
             type="radio" 
@@ -16,7 +15,7 @@ function RadioButton({ engine, description, selectedEngine, onRadioChange }) {
             onChange={onRadioChange} 
             checked={selectedEngine === engine}
             />
-            {description}
+            <span>{engineName}</span>{description}
         </label>
         
     )

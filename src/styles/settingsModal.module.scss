@@ -19,6 +19,18 @@
     padding: 20px;
     margin: 1.2rem;
     filter: drop-shadow(2px 2px 3px darkgrey);
+
+    h2 {
+        width: 100%;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:focus,
+    a:active {
+        color: black;
+    }
 }
 
 .overlay {

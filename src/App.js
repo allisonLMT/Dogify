@@ -87,11 +87,12 @@ function App() {
     }
 
     function randomNum(arr) {
+        //random number from 0 to arr.length-1 (since it's floored)
         return Math.floor(Math.random()*arr.length);
     }
 
     function shuffleItem() {
-        const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'a cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup and relish', 'an apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip'];
+        const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup', 'apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip', 'a capybara in an intertube'];
         console.log("shuffling items")
 
         const item = items[randomNum(items)];
