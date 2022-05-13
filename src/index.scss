@@ -11,15 +11,11 @@ body {
 
 .page-container {
    position: relative;
-   min-height: 100vh;
-    border: 1px solid red;
-   
-  
+   min-height: 100vh; 
 }
 #content-wrap {
-    margin: 110px 1rem 0;
-
-  //border: 1px solid blue;
+    margin: 0 1rem;
+    padding: 110px 0 50px;
 }
 
 p {
