@@ -1,32 +1,5 @@
-@use 'styles/_variables' as *;
-@use 'styles/_mixins' as *;
-
-body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: $mediumGreen;
-}
-
-.page-container {
-   position: relative;
-   min-height: 100vh; 
-}
-#content-wrap {
-    margin: 0 1rem;
-    padding: 7.5rem 0 3.125rem;
-}
-
-.main-content {
-    margin: 0 auto;
-    max-width: 500px;
-    width: 100%;
-}
-
-p {
-    margin-block-start: 0.5rem;
-}
+@use '_variables' as *;
+@use '_mixins' as *;
 
 .intro {
     text-align: left;
@@ -64,7 +37,7 @@ p {
     width: 100%;
 }
 
-#textBox {
+.textBox {
     width: 100%;
     padding: 0.3125rem;
     font-size: 1.2rem;
@@ -72,10 +45,10 @@ p {
     border-radius: 0.1875rem;
 }
 
-#submit {
+.submit {
     @include green-button;
 }
 
-#shuffle {
+.shuffle {
     @include translucent-button;
 }

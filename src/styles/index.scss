@@ -1,0 +1,29 @@
+@use '_variables' as *;
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $mediumGreen;
+}
+
+.page-container {
+   position: relative;
+   min-height: 100vh; 
+}
+.content-wrap {
+    margin: 0 1rem;
+    padding: 100px 0 3.125rem;
+}
+
+.main-content {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+p {
+    margin-block-start: 0.5rem;
+}
+

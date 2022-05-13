@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/oneResult.module.scss';
 import Heart from '../components/Heart';
 
-function OneResult({ result }) {
+function OneResult({ result, updateLocalFaves }) {
 
     //needs to show the prompt and the result (at a minimum)
 
@@ -12,7 +12,7 @@ function OneResult({ result }) {
 
     return (
         <article className={styles.oneResult}>
-            <Heart result={result} />
+            <Heart result={result} updateLocalFaves={updateLocalFaves} />
             <section>
                 <h3>Prompt:</h3>
                 <p>{result.prompt}</p>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from '../styles/heart.module.scss';
-import { addFavorite, removeFavorite, findFavorite } from '../components/localStorageFavorites.js';
+import { addFavorite, removeFavorite, findFavorite, getFavorites } from '../components/localStorageFavorites.js';
 
 
 
-function Heart({ result }) {
+function Heart({ result, updateLocalFaves }) {
 
     //findFavorite(result) will return -1 if not a fav, or the index if it is there ( !== -1)
     const [favorite, setFavorite] = useState(findFavorite(result));
@@ -20,7 +20,8 @@ function Heart({ result }) {
             removeFavorite(result);
             setFavorite(-1)
         }
-
+        //when a heart is clicked, update the 
+        updateLocalFaves(getFavorites());
     }
 
     return (
