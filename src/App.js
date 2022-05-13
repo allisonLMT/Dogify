@@ -134,33 +134,34 @@ function App() {
         <div className='page-container'>
             <Header />
             <div id='content-wrap'>
-                <section className='intro'>
-                    <div className='titleSettings'>
-                        <h2>What's Dogify?</h2>
-                        <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
-                    </div>
-                    <p>Dogify will write a story about a dog and whatever else you choose!</p>
-                    <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
-                </section>
-                <section className='form'>
-                    <div className='labelShuffle'>
-                        <label htmlFor="items">Add something to the story:</label>
-                        <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
-                    </div>
-                    <input
-                        type="text"
-                        name="items"
-                        id="textBox"
-                        placeholder="or leave it to us..."
-                        value={userInput}
-                        // API allows maxlength = 1000
-                        maxLength="200"
-                        onChange={(e) => handleInput(e)}
-                    />
-                    
-                    <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
-                </section>
-            
+                <div className='main-content'>
+                    <section className='intro'>
+                        <div className='titleSettings'>
+                            <h2>What's Dogify?</h2>
+                            <SettingsModal onDropDownChange={onDropDownChange} onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
+                        </div>
+                        <p>Dogify will write a story about a dog and whatever else you choose!</p>
+                        <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
+                    </section>
+                    <section className='form'>
+                        <div className='labelShuffle'>
+                            <label htmlFor="items">Add something to the story:</label>
+                            <button className="material-icons" id="shuffle" onClick={shuffleItem}>shuffle</button>
+                        </div>
+                        <input
+                            type="text"
+                            name="items"
+                            id="textBox"
+                            placeholder="or leave it to us..."
+                            value={userInput}
+                            // API allows maxlength = 1000
+                            maxLength="200"
+                            onChange={(e) => handleInput(e)}
+                        />
+                        
+                        <input type="submit" value="Dogify Now!" id="submit" onClick={onSubmit}/>
+                    </section>
+                </div>
                 {results.length > 0 &&
                     <section>
                         <Results results={results} /> 

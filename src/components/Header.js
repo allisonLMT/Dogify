@@ -7,8 +7,10 @@ function Header() {
 
     return (
         <header className={styles.header}>
-            <img src={paw} alt="paw icon" />
-            <h1>Dogify!</h1>
+            <div className={styles.logoWrap}>
+                <img src={paw} alt="paw icon" />
+                <h1>Dogify!</h1>
+            </div>
         </header>
     )
 }
