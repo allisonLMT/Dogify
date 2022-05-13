@@ -15,16 +15,10 @@ function NavMenu({ page }) {
     };
 
     return (
-        // <header className={styles.header}>
-        //     <div className={styles.logoWrap}>
-        //         <img src={paw} alt="paw icon" />
-        //         <h1>Dogify!</h1>
-        //     </div>
-        // </header>
 
         <>
             <div className={styles.navBar} >
-                <NavLink to='/#home' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>Dogify</NavLink>
+                <NavLink to='/' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>Dogify</NavLink>
                 <div className={ classes( styles.navBurger, { [styles.open] : isOpen } ) } 
                     onClick={() => { handleToggle() } }>
                     <span></span>
@@ -33,13 +27,13 @@ function NavMenu({ page }) {
                     <span></span>
                 </div> 
                 <nav className={styles.desktopNav}>
-                    <NavLink to='/#home' className = { (page === 'home') ? styles.active : styles.inactive } >home</NavLink>
+                    <NavLink to='/' className = { (page === 'home') ? styles.active : styles.inactive } >home</NavLink>
                     <NavLink to='/about' className = { (page === 'about') ? styles.active : styles.inactive }>about</NavLink>
                     <NavLink to='/favorites' className = { (page === 'favorites') ? styles.active : styles.inactive }>favorites</NavLink>
                 </nav>
             </div>
             <nav className={ classes( styles.navMenu, { [styles.open] : isOpen }) }>
-                <NavLink to='/#home'>home</NavLink>
+                <NavLink to='/'>home</NavLink>
                 <NavLink to='/about'>about</NavLink>
                 <NavLink to='/favorites' >favorites</NavLink>
             </nav>
