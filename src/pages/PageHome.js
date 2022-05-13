@@ -77,11 +77,6 @@ function PageHome() {
         setSanitizedInput('');
     }
 
-    // function onDropDownChange(event) {
-    //     console.log("dropdownchange")
-    //     setSelectedEngine(event.target.value);
-    // }
-
     function onRadioChange(event) {
         console.log("radio change");
         setSelectedEngine(event.target.value);
