@@ -2,12 +2,12 @@ import React from 'react';
 import styles from '../styles/results.module.scss';
 import OneResult from '../components/OneResult.js';
 
-function Results({ results }) {
+function Results({ results, updateLocalFaves }) {
 
     return (
         <section className={styles.results}>
            {results.map(result => 
-                <OneResult result={result} key={result.id}/>    
+                <OneResult result={result} updateLocalFaves={updateLocalFaves} key={result.id}/>    
             )} 
         </section>
     )
