@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from '../components/Header';
+import NavMenu from '../components/NavMenu';
 import SettingsModal from '../components/SettingsModal';
 import Results from '../components/Results';
 import Footer from '../components/Footer';
@@ -130,7 +130,7 @@ function PageHome() {
 
     return (
         <div className='page-container'>
-            <Header />
+            <NavMenu page={'home'}/>
             <div id='content-wrap'>
                 <div className='main-content'>
                     <section className='intro'>
