@@ -1,11 +1,7 @@
-//will need functions to add to faves and remove
-//will need a way to tell if it's in faves (so the heart can conditionally render)
-
 // Store the fav result in the array before moving them to local storage
 var favResults = [];
 
 function addFavorite(result) {
-    console.log("adding to fav")
 
     //push the result into the array
     favResults.push(result);
@@ -16,7 +12,6 @@ function addFavorite(result) {
 }
 
 function removeFavorite(result) {
-    console.log("removing from fav")
 
     //get the results from local storage, and turn back to an array
     var storageFavs = JSON.parse(localStorage.getItem('favResults'));

@@ -4,8 +4,6 @@ import Heart from '../components/Heart';
 
 function OneResult({ result, updateLocalFaves }) {
 
-    //needs to show the prompt and the result (at a minimum)
-
     //the format of the engine name (stored in model) is not the same as the format used in the URL and radio buttons
     //this reformats the model value so that the formats are consistent
     const formattedEngine = result.model.replace(':', '-');

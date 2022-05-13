@@ -50,7 +50,7 @@ function PageHome() {
     }
 
     function onSubmit() {
-        console.log("submitted")
+       
        
         const prompts = generatePrompts();
 
@@ -78,7 +78,6 @@ function PageHome() {
     }
 
     function onRadioChange(event) {
-        console.log("radio change");
         setSelectedEngine(event.target.value);
     }
 
