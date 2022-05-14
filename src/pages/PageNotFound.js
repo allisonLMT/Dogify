@@ -14,7 +14,6 @@ function PageNotFound () {
                     <h3 className={styles.notFound}>Page not found.</h3>
                 </div>
             <Footer />
-            
         </div>
     )
 };

@@ -51,7 +51,6 @@ function PageHome() {
 
     function onSubmit() {
        
-       
         const prompts = generatePrompts();
 
         const url = `https://api.openai.com/v1/engines/${selectedEngine}/completions`;
@@ -118,10 +117,8 @@ function PageHome() {
             }
         }
        
-        return  prompts;
+        return prompts;
     }
-
-    
 
     return (
         <div className='page-container'>
@@ -155,14 +152,13 @@ function PageHome() {
                         <input type="submit" value="Dogify Now!" className={styles.submit} onClick={onSubmit}/>
                     </section>
                 </div>
-
                 {results.length > 0 &&
-                        <Results results={results} /> 
+                    <Results results={results} /> 
                 }
             </div>
             <Footer />
         </div>
-  );
+    );
 }
 
 export default PageHome;

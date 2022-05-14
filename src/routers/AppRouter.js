@@ -6,7 +6,6 @@ import PageAbout from '../pages/PageAbout';
 import PageNotFound from '../pages/PageNotFound';
 
 
-
 function AppRouter() {
 
     return (
@@ -17,7 +16,6 @@ function AppRouter() {
                 <Route path='favorites' element={<PageFavorites />} />
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
-
         </div>
     );
 
