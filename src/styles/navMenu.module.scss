@@ -9,6 +9,7 @@
     height: 75px;
     width: 100%;
     z-index: 15;
+    filter: drop-shadow(2px 2px 3px darkgrey);
     
 }
 
@@ -20,8 +21,6 @@
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    filter: drop-shadow(2px 2px 3px darkgrey);
-   
     
     a,
     a:visited,
