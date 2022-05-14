@@ -1,0 +1,38 @@
+.dogify,
+.OpenAI {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.dogify h2,
+.OpenAI h2 {
+    text-align: center;
+}
+
+.dogify p, 
+.OpenAI p {
+    max-width: 28.125rem;
+    padding: 0 1rem;
+}
+
+.dogify img,
+.OpenAI img {
+    height: 5.625rem;
+    padding: 0 2rem;
+}
+
+.dogify img {
+    width: 6.25rem;
+}
+
+.OpenAI a, 
+.OpenAI a:visited {
+    color: black;
+}
+
+div.about {
+    max-width: 21.875rem;
+}
