@@ -1,17 +1,11 @@
 @use '_variables' as *;
 
-
-//favorite is green
-//not favorite is grey
-//hover is outline (color remains the same
-
-
 .fav {
     fill: $darkGreen;
-    filter: drop-shadow(2px 2px 2px darkgrey)
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey)
 }
 
 .notFav {
     fill: darkgrey;
-    filter: drop-shadow(2px 2px 2px darkgrey)
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey)
 }

@@ -5,22 +5,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 3px solid $darkGreen;
-    // position: absolute;
-    // top: 5%;
-    // left: 5%;
-    // right: 5%;
-    // bottom: 5%;
-    max-width: 515px;
+    border: 0.1875rem solid $darkGreen;
+    max-width: 32.1875rem;
     background: #fff;
     overflow: auto;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     outline: none;
-    padding: 20px;
+    padding: 1.25rem;
     margin: 2rem 1rem;
-    filter: drop-shadow(2px 2px 3px darkgrey);
+    filter: drop-shadow(0.125rem 0.125rem 0.1875rem darkgrey);
 
-    @media(min-width: 600px ) {
+    @media(min-width: 37.5rem ) {
         margin: 2rem auto;
     }
 
