@@ -1,5 +1,10 @@
 @use '_variables' as *;
 
+.heart {
+    position: absolute;
+    right: 1rem;
+}
+
 .fav {
     fill: $darkGreen;
     filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey)

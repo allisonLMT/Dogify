@@ -27,8 +27,8 @@ function OneResult({ result, updateLocalFaves }) {
 
     return (
         <article className={styles.oneResult}>
-            <Heart result={result} updateLocalFaves={updateLocalFaves} />
-            <section>
+            <Heart result={result} updateLocalFaves={updateLocalFaves}/>
+            <section className={styles.prompt}>
                 <h3>Prompt:</h3>
                 <p>{result.prompt}</p>
             </section>
