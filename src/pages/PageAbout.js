@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import styles from '../styles/pageAbout.module.scss';
 import NavMenu from '../components/NavMenu';
 import Footer from '../components/Footer';
@@ -12,8 +13,9 @@ function PageAbout() {
 
     return (
         <div className='page-container'>
+            <HashLink to="/about#content">Skip to content</HashLink>
             <NavMenu page={'about'}/>
-            <div className='content-wrap'>
+            <div className='content-wrap' id='content'>
                     <section className={styles.dogify}>
                             <img src={paw} alt="Dogify logo" />
                         <div className={styles.about}>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { getFavorites } from '../components/localStorageFavorites';
 import NavMenu from '../components/NavMenu';
 import Results from '../components/Results';
@@ -22,8 +23,9 @@ function PageFavorites () {
 
     return (
         <div className='page-container'>
+            <HashLink to="/favorites#content">Skip to content</HashLink>
             <NavMenu page={'favorites'}/>
-                <div className='content-wrap'>
+                <div className='content-wrap' id='content'>
                     <div className={styles.favorites}>
                         <h2>Favorites</h2>
                             {( localFaves.length > 0) ? <Results results={localFaves} updateLocalFaves={updateLocalFaves}/> :

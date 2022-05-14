@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HashLink } from 'react-router-hash-link';
 import NavMenu from '../components/NavMenu';
 import SettingsModal from '../components/SettingsModal';
 import Results from '../components/Results';
@@ -122,8 +123,9 @@ function PageHome() {
 
     return (
         <div className='page-container'>
+            <HashLink to="/#content">Skip to content</HashLink>
             <NavMenu page={'home'}/>
-            <div className='content-wrap'>
+            <div className='content-wrap' id="content">
                 <div className='main-content'>
                     <section className={styles.intro}>
                         <div className={styles.titleSettings}>
