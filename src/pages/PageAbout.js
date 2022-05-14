@@ -13,7 +13,7 @@ function PageAbout() {
 
     return (
         <div className='page-container'>
-            <HashLink to="/about#content">Skip to content</HashLink>
+            <HashLink to="/about#content" className="skip-to-content-link">Skip to content</HashLink>
             <NavMenu page={'about'}/>
             <div className='content-wrap' id='content'>
                     <section className={styles.dogify}>

@@ -23,7 +23,7 @@ function PageFavorites () {
 
     return (
         <div className='page-container'>
-            <HashLink to="/favorites#content">Skip to content</HashLink>
+            <HashLink to="/favorites#content" className="skip-to-content-link">Skip to content</HashLink>
             <NavMenu page={'favorites'}/>
                 <div className='content-wrap' id='content'>
                     <div className={styles.favorites}>

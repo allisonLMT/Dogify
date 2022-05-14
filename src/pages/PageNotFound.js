@@ -9,7 +9,7 @@ function PageNotFound () {
    
     return (
         <div className='page-container'>
-            <HashLink to="#content">Skip to content</HashLink>
+            <HashLink to="#content" className="skip-to-content-link">Skip to content</HashLink>
             <NavMenu />
                 <div className='content-wrap' id="content">
                     <h2 className={styles.notFound}>404 Error</h2>

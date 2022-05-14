@@ -123,7 +123,7 @@ function PageHome() {
 
     return (
         <div className='page-container'>
-            <HashLink to="/#content">Skip to content</HashLink>
+            <HashLink to="/#content" className="skip-to-content-link">Skip to content</HashLink>
             <NavMenu page={'home'}/>
             <div className='content-wrap' id="content">
                 <div className='main-content'>
