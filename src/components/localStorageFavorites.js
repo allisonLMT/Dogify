@@ -1,4 +1,4 @@
-// Store the fav result in the array before moving them to local storage
+// Store the fav results in the array before moving them to local storage
 var favResults = [];
 
 function addFavorite(result) {

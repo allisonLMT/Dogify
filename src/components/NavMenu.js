@@ -17,7 +17,7 @@ function NavMenu({ page }) {
     return (
 
         <div className={styles.navWrap}>
-            <div className={styles.navBar} >
+            <nav className={styles.navBar} >
                 <NavLink to='/' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>
                     <img src={paw} alt="Dogify logo" />
                     Dogify
@@ -29,12 +29,12 @@ function NavMenu({ page }) {
                     <span></span>
                     <span></span>
                 </div> 
-                <nav className={styles.desktopNav}>
+                <div className={styles.desktopNav}>
                     <NavLink to='/' className = { (page === 'home') ? styles.active : styles.inactive } >home</NavLink>
                     <NavLink to='/about' className = { (page === 'about') ? styles.active : styles.inactive }>about</NavLink>
                     <NavLink to='/favorites' className = { (page === 'favorites') ? styles.active : styles.inactive }>favorites</NavLink>
-                </nav>
-            </div>
+                </div>
+            </nav>
             <nav className={ classes( styles.navMenu, { [styles.open] : isOpen }) }>
                 <NavLink to='/'>home</NavLink>
                 <NavLink to='/about'>about</NavLink>

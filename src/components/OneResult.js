@@ -4,9 +4,24 @@ import Heart from '../components/Heart';
 
 function OneResult({ result, updateLocalFaves }) {
 
-    //the format of the engine name (stored in model) is not the same as the format used in the URL and radio buttons
-    //this reformats the model value so that the formats are consistent
-    const formattedEngine = result.model.replace(':', '-');
+    //takes the 'model' key (which is the engine used to get the result) and changes it to the format used in the Settings modal.
+    var formattedEngine;
+
+    switch (result.model) {
+        case 'text-davinci:002':
+            formattedEngine = "DaVinci";
+            break;
+        case 'text-curie:001':
+            formattedEngine = "Curie";
+            break;
+        case 'text-babbage:001':
+            formattedEngine = "Babbage";
+            break;
+        case 'text-ada:001':
+            formattedEngine = "Ada";
+        break;
+    }
+    
 
     return (
         <article className={styles.oneResult}>
