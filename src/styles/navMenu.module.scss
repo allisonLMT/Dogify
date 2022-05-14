@@ -1,19 +1,23 @@
 @use '_variables' as *;
 
 .navWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkGreen;
+    height: 75px;
+    width: 100%;
+    z-index: 15;
     
 }
 
 .navBar {
     display: flex;
     position: fixed;
-    z-index: 15;
     align-items: center;
     justify-content: space-between;
-    background-color: $darkGreen;
-    height: 75px;
     width: 100%;
-    max-width: 100rem;
+    max-width: 1600px;
     margin: 0 auto;
     filter: drop-shadow(2px 2px 3px darkgrey);
    
