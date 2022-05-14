@@ -156,9 +156,7 @@ function PageHome() {
                     </section>
                 </div>
                 {results.length > 0 &&
-                    <section>
                         <Results results={results} /> 
-                    </section>
                 }
             </div>
             <Footer />

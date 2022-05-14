@@ -27,8 +27,9 @@ function SettingsModal({ selectedEngine, onRadioChange }) {
         className={styles.content}
         overlayClassName={styles.overlay}
       >
-        <h2>Settings</h2>
+        
         <section>
+            <h2>Settings</h2>
             <h3>Engines</h3>
             <p>Dogify runs on <a href="https://openai.com/api/">OpenAI's API</a> and you may choose your engine:</p>
             <RadioButton engine='text-curie-001' engineName="Curie:" description=" very capable, faster than DaVinci" selectedEngine={selectedEngine} onRadioChange={onRadioChange} />

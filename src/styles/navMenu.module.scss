@@ -1,9 +1,13 @@
 @use '_variables' as *;
 
+.navWrap {
+    
+}
+
 .navBar {
     display: flex;
     position: fixed;
-    z-index: 100;
+    z-index: 15;
     align-items: center;
     justify-content: space-between;
     background-color: $darkGreen;
@@ -136,11 +140,11 @@
 nav.open {
     display: block;
     position: fixed;
-    top: 3.9375rem;
+    top: 4.6875rem;
     width: 100%;
-    z-index: 100;
+    z-index: 15;
     overflow: hidden;
-    filter: drop-shadow(0.125rem 0.125rem 0.125rem black);
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
 
     @media (min-width: 62.5rem) {
         display: none;

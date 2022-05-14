@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/navMenu.module.scss';
 import classes from 'classnames';
@@ -16,7 +16,7 @@ function NavMenu({ page }) {
 
     return (
 
-        <>
+        <div className={styles.navWrap}>
             <div className={styles.navBar} >
                 <NavLink to='/' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>Dogify</NavLink>
                 <div className={ classes( styles.navBurger, { [styles.open] : isOpen } ) } 
@@ -37,7 +37,7 @@ function NavMenu({ page }) {
                 <NavLink to='/about'>about</NavLink>
                 <NavLink to='/favorites' >favorites</NavLink>
             </nav>
-        </>  
+        </div>  
 
 
     )

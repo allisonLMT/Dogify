@@ -7,11 +7,7 @@ import styles from '../styles/pageFavorites.module.scss';
 import Footer from '../components/Footer';
 
 function PageFavorites () {
-    // //keeps the content scrolled to the top as Favorites are added (otherwise it scrolls under the header)
-    // const el = document.getElementsByClassName("content-wrap");
-    // if (el !== null) {
-    //     el.scrollTo = 0;
-    // }
+   
     window.scrollTo(0, 0);
 
     const storedFaves = getFavorites();

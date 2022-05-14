@@ -5,20 +5,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    outline: 6px solid $extraDarkGreen;
     border: 3px solid $darkGreen;
-    position: 'absolute';
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
+    // position: absolute;
+    // top: 5%;
+    // left: 5%;
+    // right: 5%;
+    // bottom: 5%;
+    max-width: 515px;
     background: #fff;
     overflow: auto;
     border-radius: 4px;
     outline: none;
     padding: 20px;
-    margin: 1.2rem;
+    margin: 2rem 1rem;
     filter: drop-shadow(2px 2px 3px darkgrey);
+
+    @media(min-width: 600px ) {
+        margin: 2rem auto;
+    }
 
     h2 {
         width: 100%;
@@ -39,8 +43,9 @@
     left: 0;
     right: 0;
     bottom: 0;
+    
     background-color: rgba(255, 255, 255, 0.65);
-    z-index: 10;
+    z-index: 20;
 }
 
 
