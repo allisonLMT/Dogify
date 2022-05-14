@@ -155,6 +155,7 @@ function PageHome() {
                         <input type="submit" value="Dogify Now!" className={styles.submit} onClick={onSubmit}/>
                     </section>
                 </div>
+
                 {results.length > 0 &&
                         <Results results={results} /> 
                 }

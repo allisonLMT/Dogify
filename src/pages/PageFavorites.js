@@ -26,11 +26,10 @@ function PageFavorites () {
                 <div className='content-wrap'>
                     <div className={styles.favorites}>
                         <h2>Favorites</h2>
-                        <div className={styles.resultsWrap}>
                             {( localFaves.length > 0) ? <Results results={localFaves} updateLocalFaves={updateLocalFaves}/> :
                                 <p className={styles.none}>You don't have any favorites yet. Visit the <Link to="/">homepage</Link> to Dogify some stories! </p>}
                         </div>
-                    </div>
+                    
                     
                 </div>
             <Footer />
