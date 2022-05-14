@@ -15,16 +15,16 @@ function PageAbout() {
             <NavMenu page={'about'}/>
             <div className='content-wrap'>
                     <section className={styles.dogify}>
-                        <img src={paw} alt="Dogify logo" />
-                        <div>
+                            <img src={paw} alt="Dogify logo" />
+                        <div className={styles.about}>
                             <h2>About Dogify</h2>
                             <p>Dogify is an app that creates a story about a dog created by Allison Tredwell. It was built using React js and OpenAI API.</p>
                         </div>
                     </section>
                     <section className={styles.OpenAI}>
                             <img src={openAI} alt="OpenAI logo" />
-                            <div>
-                            <h2>OpenAI API</h2>
+                            <div className={styles.about}>
+                            <h2>About OpenAI API</h2>
                                 <p><a href="https://openai.com/api/">OpenAI's API</a> uses text prompts to produce natural language results.</p>
                             </div>
                     </section>
