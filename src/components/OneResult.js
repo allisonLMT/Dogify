@@ -20,6 +20,8 @@ function OneResult({ result, updateLocalFaves }) {
         case 'text-ada:001':
             formattedEngine = "Ada";
         break;
+        default:
+            formattedEngine = '';
     }
     
 
