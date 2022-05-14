@@ -30,6 +30,11 @@
     a:active {
         color: black;
     }
+
+    img {
+        height: 45px;
+        padding-right: 1rem;
+    }
 }
 
 .siteTitle {
@@ -39,6 +44,8 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
     
     @media (min-width: 62.5rem) {
         font-size: 1.85rem;

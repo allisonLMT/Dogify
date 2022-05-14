@@ -18,7 +18,10 @@ function NavMenu({ page }) {
 
         <div className={styles.navWrap}>
             <div className={styles.navBar} >
-                <NavLink to='/' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>Dogify</NavLink>
+                <NavLink to='/' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>
+                    <img src={paw} alt="Dogify logo" />
+                    Dogify
+                </NavLink>
                 <div className={ classes( styles.navBurger, { [styles.open] : isOpen } ) } 
                     onClick={() => { handleToggle() } }>
                     <span></span>
