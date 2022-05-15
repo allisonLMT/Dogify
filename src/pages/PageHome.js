@@ -50,7 +50,7 @@ function PageHome() {
     }
 
     function onSubmit() {
-        setLoading(true)
+        setLoading(true);
         const prompts = generatePrompts();
 
         const url = `https://api.openai.com/v1/engines/${selectedEngine}/completions`;
@@ -72,7 +72,7 @@ function PageHome() {
             setResults([data, ...results]);
             setLoading(false)
         });
-    }
+    };
 
     async function getResponse(url, parameters) {
         const response = await fetch(url, {
@@ -84,13 +84,11 @@ function PageHome() {
         body: JSON.stringify(parameters)
         });
 
-        //new
         if ( response.ok ) {
             setLoading(true)
         } else {
             setLoading(false)
         }
-        //end new
 
         return response.json()
     }
@@ -100,12 +98,11 @@ function PageHome() {
     }
 
     function randomNum(arr) {
-        //random number from 0 to arr.length-1 (since it's floored)
         return Math.floor(Math.random()*arr.length);
     }
 
     function shuffleItem() {
-        const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup', 'apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip', 'a capybara in an intertube'];
+        const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup', 'apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip', 'a capybara in an intertube', 'monkey bars', 'a crocheted giraffe', 'a gold pocket watch', 'otters holding hands', 'some mismatched socks'];
 
         const item = items[randomNum(items)];
         setUserInput(item);
@@ -117,7 +114,7 @@ function PageHome() {
     function generatePrompts() {
 
         //randomly select a dog breed from the list
-        const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel'];
+        const breeds = ['Goldendoodle', 'French Bulldog', 'Corgi', 'Daschund', 'Chihuahua', 'Basset Hound', 'Great Dane', 'German Shephard', 'Pug', 'Bernese Mountain Dog', 'Beagle', 'Golden Retriever', 'Cocker Spaniel', 'Chocolate Lab', 'Bloodhound'];
         const randomBreed = breeds[randomNum(breeds)];
         let prompts;
 

@@ -1,4 +1,4 @@
-import React, { Fragment }from 'react';
+import React, { useState, Fragment }from 'react';
 import Modal from 'react-modal';
 import RadioButton from '../components/RadioButton';
 import styles from '../styles/settingsModal.module.scss';
@@ -7,7 +7,7 @@ Modal.setAppElement('#root');
 
 function SettingsModal({ selectedEngine, onRadioChange }) {
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
     setIsOpen(true);
@@ -65,7 +65,6 @@ function SettingsModal({ selectedEngine, onRadioChange }) {
       </Modal>
     </>
   );
-
 }
 
 export default SettingsModal;

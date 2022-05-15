@@ -15,6 +15,7 @@ function PageFavorites () {
     
     //set a local list equal to the Favorites from storage,
     //this is the list the Results will be displayed from
+    //Favorites are stored in the order that they are added
     const [localFaves, setLocalFaves] = useState(storedFaves);
 
     function updateLocalFaves(favesFromStorage) {

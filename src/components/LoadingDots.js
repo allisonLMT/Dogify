@@ -1,5 +1,4 @@
 import React from 'react';
-//import classes from 'classnames';
 import styles from '../styles/loadingDots.module.scss';
 
 function LoadingDots({ loading }) {
