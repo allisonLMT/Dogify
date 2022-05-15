@@ -3,6 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import NavMenu from '../components/NavMenu';
 import styles from '../styles/pageNotFound.module.scss';
 import Footer from '../components/Footer';
+import classNames from 'classnames';
 
 function PageNotFound () {
 
@@ -11,9 +12,9 @@ function PageNotFound () {
         <div className='page-container'>
             <HashLink to="#content" className="skip-to-content-link">Skip to content</HashLink>
             <NavMenu />
-                <div className='content-wrap' id="content">
-                    <h2 className={styles.notFound}>404 Error</h2>
-                    <h3 className={styles.notFound}>Page not found.</h3>
+                <div className={classNames('content-wrap', styles.notFound)} id="content">
+                    <h2>404 Error</h2>
+                    <p>Page not found.</p>
                 </div>
             <Footer />
         </div>
