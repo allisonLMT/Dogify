@@ -1,4 +1,4 @@
-# Shopify Intern Tech Challenge - ReadMe Doc
+# Shopify Intern Tech Challenge - README
 
 This project was created by Allison Tredwell for the Shopify Front End Developer Fall 2022 Internship application.
 
