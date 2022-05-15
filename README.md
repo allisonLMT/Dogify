@@ -17,7 +17,23 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 
 [7. Features](#7-features)
 
+[7.1 Randomization](#71-randomization)
+
+[7.2 Shuffle Button](#72-shuffle-button)
+
+[7.3 Favorites List](#73-favorites-list)
+
+[7.4 Sanitized User Input](#74-sanitized-user-input)
+
 [8. Accessibility](#8-accessibility)
+
+[8.1 Semantic HTML](#81-semantic-html)
+
+[8.2 Color Contrast](#82-color-contrast)
+
+[8.3 Skip To Content](#83-skip-to-content)
+
+[8.4 Sizing in rem](#84-sizing-in-rem)
 
 
 
@@ -50,27 +66,28 @@ The color scheme was inspired by my dog’s collar, which we had picked because 
 
 ## 7. Features:
 
-### Randomization: 
+### 7.1 Randomization: 
 A random dog breed is added to each prompt, for variety.
 
-### Shuffle Button: 
+### 7.2 Shuffle Button: 
 If the user isn’t sure what to add, or would like to see some examples, they can shuffle to view the randomized items. If the user doesn’t enter any text, a random prompt will be provided for each new submit.
-### Favorites List: 
+
+### 7.3 Favorites List: 
 Users can add stories to their Favorites list by clicking on a grey heart. The list is saved in local storage which allows users to keep their Favorites on their device, without the need to log in or create an account. The Favorites are live updated on the Favorites page. 
 
-### Sanitized User Input: 
+### 7.4 Sanitized User Input: 
 The user input is sanitized before being sent to the API, for increased security. 
 
 ## 8. Accessibility
 
-### Semantic HTML:  
+### 8.1 Semantic HTML:  
 Semantic HTML is used to provide more context to screen readers.
 
-### Color Contrast: 
+### 8.2 Color Contrast: 
 All color combinations were tested with https://webaim.org/resources/contrastchecker/ to ensure that accessibility guidelines were met.
 
-### Skip To Content: 
+### 8.3 Skip To Content: 
 Skip to Content links on each page are hidden until they are in focus, then they appear and allow the user to move directly to the content without listening to the navigation.
 
-### Sizing in rem: 
+### 8.4 Sizing in rem: 
 Sizing is done in rem (instead of px) to respect the font-size preferences set by the user.
