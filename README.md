@@ -3,8 +3,8 @@
 This project was created by Allison Tredwell for the Shopify Front End Developer Fall 2022 Internship application.
 
 ## Table of Contents:
-[1. Goal](#1.-goal)
-[2. Shopify's Requirements](#2.-shopify's-requirements)
+[1. Goal](#1-goal)
+[2. Shopify's Requirements](#2-shopifys-requirements)
 
 ## 1. Goal: 
 Create an app that sends a text prompt collected from the user to the OpenAI API, and displays the results in a list. 
