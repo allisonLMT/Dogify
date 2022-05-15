@@ -7,8 +7,8 @@ function Results({ results, updateLocalFaves }) {
     return (
         <div className={styles.resultsWrap}>
             <section className={styles.results}>
-            {results.map((result, i)=> 
-                    <OneResult result={result} updateLocalFaves={updateLocalFaves} i={i} key={result.id}/>    
+            {results.map(result => 
+                    <OneResult result={result} updateLocalFaves={updateLocalFaves} key={result.id}/>    
                 )} 
             </section>
         </div>
