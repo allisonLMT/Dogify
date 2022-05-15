@@ -37,10 +37,6 @@ function PageHome() {
     }
 
     function handleInput(e) {
-        // if(e.key === "Enter") {
-        //     onSubmit();
-        // }
-
 
         //sanitizes the input as it's entered
         //display/prompt is kept as the user has entered it, but the input sent to the API is sanitized
@@ -78,7 +74,6 @@ function PageHome() {
             var updatedResults = results.concat(data).reverse();
             setResults(updatedResults);
         });
-        //setSanitizedInput('');
     }
 
     function onRadioChange(event) {
@@ -154,7 +149,6 @@ function PageHome() {
                             // API allows maxlength = 1000
                             maxLength="200"
                             onChange={(e) => handleInput(e)}
-                            // onKeyPress={(e) => handleInput(e)}
                         />
                         
                         <input type="submit" value="Dogify Now!" className={styles.submit} onClick={onSubmit}/>
