@@ -37,7 +37,6 @@ function PageHome() {
     }
 
     function handleInput(e) {
-        console.log("handling")
         //sanitizes the input as it's entered
         //display/prompt is kept as the user has entered it, but the input sent to the API is sanitized
         setUserInput(e.target.value)

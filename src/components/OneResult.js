@@ -5,25 +5,19 @@ import Heart from '../components/Heart';
 function OneResult({ result, updateLocalFaves }) {
 
     //takes the 'model' key (which is the engine used to get the result) and changes it to the format used in the Settings modal.
+    //note that the format of the model value is not consistent (some use '-' and some use ':'), so search for substring is more consistent
     var formattedEngine;
 
-    switch (result.model) {
-        case 'text-davinci:002':
-            formattedEngine = "DaVinci";
-            break;
-        case 'text-curie:001':
-            formattedEngine = "Curie";
-            break;
-        case 'text-babbage:001':
-            formattedEngine = "Babbage";
-            break;
-        case 'text-ada:001':
-            formattedEngine = "Ada";
-        break;
-        default:
-            formattedEngine = '';
-    }
-    
+    if (result.model.indexOf("curie") !== -1) {
+        formattedEngine = "Curie";
+    } else if (result.model.indexOf("davinci") !== -1) {
+        formattedEngine = "DaVinci";
+    } else if (result.model.indexOf("babbage") !== -1) {
+        formattedEngine = "Babbage";
+    } else if (result.model.indexOf("ada") !== -1) {
+        formattedEngine = "Ada";
+    };
+   
 
     return (
         <article className={styles.oneResult}>
