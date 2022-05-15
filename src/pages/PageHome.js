@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HashLink } from 'react-router-hash-link';
+import _ from "lodash";
 import NavMenu from '../components/NavMenu';
 import SettingsModal from '../components/SettingsModal';
 import LoadingDots from '../components/LoadingDots';
@@ -26,6 +27,7 @@ function PageHome() {
     const [selectedEngine, setSelectedEngine] = useState('text-curie-001');
     //load status used for determining if loading dots show or not
     const [loading, setLoading] = useState(false);
+
 
     function handleInput(e) {
 
@@ -66,10 +68,8 @@ function PageHome() {
             //add a key value pair to store the prompt with it's result
             data.prompt = prompts.asIs;
             
-            //takes the existing result array, and concats the new response
-            //then reverses the array (so when mapped, they are newest to oldest) and updates the result state
-            var updatedResults = results.concat(data).reverse();
-            setResults(updatedResults);
+            //sets the results so they are stored newest to oldest (as per requirements)
+            setResults([data, ...results]);
             setLoading(false)
         });
     }
