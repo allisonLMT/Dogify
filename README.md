@@ -2,16 +2,19 @@
 
 This project was created by Allison Tredwell for the Shopify Front End Developer Fall 2022 Internship application.
 
+## Table of Contents:
+[1. Goal](#1.-goal)
+[2. Shopify's Requirements](#2.-shopify's-requirements)
 
-## Goal: 
+## 1. Goal: 
 Create an app that sends a text prompt collected from the user to the OpenAI API, and displays the results in a list. 
 
-## Shopify’s Requirements:
+## 2. Shopify’s Requirements:
 A form for entering text prompts, which submits to OpenAI API
 Results displayed and stored in a list (newest to oldest), with the prompt and response.
 Accessible, semantic HTML
 
-## Installation: 
+## 3. Installation: 
 Download the zip file from GitHub. Unzip, then open the folder with your code editor.
 
 In the terminal, run:
