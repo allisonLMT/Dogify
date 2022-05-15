@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Shopify Intern Tech Challenge - ReadMe Doc
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created by Allison Tredwell for the Shopify Front End Developer Fall 2022 Internship application.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Goal: 
+Create an app that sends a text prompt collected from the user to the OpenAI API, and displays the results in a list. 
 
-### `npm start`
+## Shopify’s Requirements:
+A form for entering text prompts, which submits to OpenAI API
+Results displayed and stored in a list (newest to oldest), with the prompt and response.
+Accessible, semantic HTML
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation: 
+Download the zip file from GitHub. Unzip, then open the folder with your code editor.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In the terminal, run:
+###  `npm install`
 
-### `npm test`
+Then, run:
+### `npm start` 
+to open the project in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Hosted: 
+https://atredwell.com/dogify/
 
-### `npm run build`
+## Inspiration: 
+The day I first started experimenting with the types of prompts that could be used, it would’ve been my dog’s 11th birthday. With her on my mind, my prompt turned to “write a story about a Goldendoodle and {user input}”. Every story made me smile, and I decided to keep the prompt, but expand on it. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Style: 
+The color scheme was inspired by my dog’s collar, which we had picked because the colors seemed so happy-go-lucky, like her. I felt like they reflected the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Randomization: 
+A random dog breed is added to each prompt, for variety.
 
-### `npm run eject`
+### Shuffle Button: 
+If the user isn’t sure what to add, or would like to see some examples, they can shuffle to view the randomized items. If the user doesn’t enter any text, a random prompt will be provided for each new submit.
+### Favorites List: 
+Users can add stories to their Favorites list by clicking on a grey heart. The list is saved in local storage which allows users to keep their Favorites on their device, without the need to log in or create an account. The Favorites are live updated on the Favorites page. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Sanitized User Input: 
+The user input is sanitized before being sent to the API, for increased security. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Accessibility
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Semantic HTML:  
+Semantic HTML is used to provide more context to screen readers.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Color Contrast: 
+All color combinations were tested with https://webaim.org/resources/contrastchecker/ to ensure that accessibility guidelines were met.
 
-## Learn More
+### Skip To Content: 
+Skip to Content links on each page are hidden until they are in focus, then they appear and allow the user to move directly to the content without listening to the navigation.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Sizing in rem: 
+Sizing is done in rem (instead of px) to respect the font-size preferences set by the user.
