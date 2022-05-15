@@ -24,17 +24,6 @@ function PageHome() {
     //engine selected from settings modal
     const [selectedEngine, setSelectedEngine] = useState('text-curie-001');
   
-    async function getResponse(url, parameters) {
-        const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify(parameters)
-        });
-        return response.json()
-    }
 
     function handleInput(e) {
 
@@ -74,6 +63,19 @@ function PageHome() {
             var updatedResults = results.concat(data).reverse();
             setResults(updatedResults);
         });
+    }
+
+    async function getResponse(url, parameters) {
+        const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+        },
+        body: JSON.stringify(parameters)
+        });
+        
+        return response.json()
     }
 
     function onRadioChange(event) {
