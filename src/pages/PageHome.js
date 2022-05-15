@@ -37,6 +37,11 @@ function PageHome() {
     }
 
     function handleInput(e) {
+        // if(e.key === "Enter") {
+        //     onSubmit();
+        // }
+
+
         //sanitizes the input as it's entered
         //display/prompt is kept as the user has entered it, but the input sent to the API is sanitized
         setUserInput(e.target.value)
@@ -73,7 +78,7 @@ function PageHome() {
             var updatedResults = results.concat(data).reverse();
             setResults(updatedResults);
         });
-        setSanitizedInput('');
+        //setSanitizedInput('');
     }
 
     function onRadioChange(event) {
@@ -104,6 +109,7 @@ function PageHome() {
 
         if (userInput === '' || sanitizedInput === '') {
             //if there was no user input, pick a random item to use
+            console.log("no input")
             const item = shuffleItem();
             prompts = {
                 sanitized: `Write a story about a ${randomBreed} and ${item}.`,
@@ -148,6 +154,7 @@ function PageHome() {
                             // API allows maxlength = 1000
                             maxLength="200"
                             onChange={(e) => handleInput(e)}
+                            // onKeyPress={(e) => handleInput(e)}
                         />
                         
                         <input type="submit" value="Dogify Now!" className={styles.submit} onClick={onSubmit}/>
