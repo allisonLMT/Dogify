@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HashLink } from 'react-router-hash-link';
 import NavMenu from '../components/NavMenu';
 import SettingsModal from '../components/SettingsModal';
+import LoadingDots from '../components/LoadingDots';
 import Results from '../components/Results';
 import Footer from '../components/Footer';
 import classes from 'classnames';
@@ -23,18 +24,8 @@ function PageHome() {
     const [results, setResults] = useState([]);
     //engine selected from settings modal
     const [selectedEngine, setSelectedEngine] = useState('text-curie-001');
-  
-    async function getResponse(url, parameters) {
-        const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify(parameters)
-        });
-        return response.json()
-    }
+    //load status used for determining if loading dots show or not
+    const [loading, setLoading] = useState(false);
 
     function handleInput(e) {
 
@@ -47,11 +38,17 @@ function PageHome() {
         const sanitizedInputValue = e.target.value.replace(regex, '');
        
         setSanitizedInput(sanitizedInputValue);
+    }
 
+    function detectEnter(e) {
+        //allows Enter in the text input to submit 
+        if (e.key === "Enter") {
+            onSubmit();
+        }
     }
 
     function onSubmit() {
-       
+        setLoading(true)
         const prompts = generatePrompts();
 
         const url = `https://api.openai.com/v1/engines/${selectedEngine}/completions`;
@@ -73,7 +70,29 @@ function PageHome() {
             //then reverses the array (so when mapped, they are newest to oldest) and updates the result state
             var updatedResults = results.concat(data).reverse();
             setResults(updatedResults);
+            setLoading(false)
         });
+    }
+
+    async function getResponse(url, parameters) {
+        const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+        },
+        body: JSON.stringify(parameters)
+        });
+
+        //new
+        if ( response.ok ) {
+            setLoading(true)
+        } else {
+            setLoading(false)
+        }
+        //end new
+
+        return response.json()
     }
 
     function onRadioChange(event) {
@@ -104,7 +123,6 @@ function PageHome() {
 
         if (userInput === '' || sanitizedInput === '') {
             //if there was no user input, pick a random item to use
-            console.log("no input")
             const item = shuffleItem();
             prompts = {
                 sanitized: `Write a story about a ${randomBreed} and ${item}.`,
@@ -149,10 +167,11 @@ function PageHome() {
                             // API allows maxlength = 1000
                             maxLength="200"
                             onChange={(e) => handleInput(e)}
+                            onKeyUp={(e) => detectEnter(e)}
                         />
-                        
                         <input type="submit" value="Dogify Now!" className={styles.submit} onClick={onSubmit}/>
                     </section>
+                    <LoadingDots loading={loading}/>
                 </div>
                 {results.length > 0 &&
                     <Results results={results} /> 
