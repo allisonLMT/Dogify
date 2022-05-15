@@ -4,7 +4,22 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 
 ## Table of Contents:
 [1. Goal](#1-goal)
+
 [2. Shopify's Requirements](#2-shopifys-requirements)
+
+[3. Installation](#3-installation)
+
+[4. Hosted Demo](#4-hosted-demo)
+
+[5. Inspiration](#5-inspiration)
+
+[6. Style](#6-style)
+
+[7. Features](#7-features)
+
+[8. Accessibility](#8-accessibility)
+
+
 
 ## 1. Goal: 
 Create an app that sends a text prompt collected from the user to the OpenAI API, and displays the results in a list. 
@@ -24,16 +39,16 @@ Then, run:
 ### `npm start` 
 to open the project in your browser.
 
-## Hosted: 
+## 4. Hosted Demo: 
 https://atredwell.com/dogify/
 
-## Inspiration: 
+## 5. Inspiration: 
 The day I first started experimenting with the types of prompts that could be used, it would’ve been my dog’s 11th birthday. With her on my mind, my prompt turned to “write a story about a Goldendoodle and {user input}”. Every story made me smile, and I decided to keep the prompt, but expand on it. 
 
-## Style: 
+## 6. Style: 
 The color scheme was inspired by my dog’s collar, which we had picked because the colors seemed so happy-go-lucky, like her. I felt like they reflected the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
 
-## Features:
+## 7. Features:
 
 ### Randomization: 
 A random dog breed is added to each prompt, for variety.
@@ -46,7 +61,7 @@ Users can add stories to their Favorites list by clicking on a grey heart. The l
 ### Sanitized User Input: 
 The user input is sanitized before being sent to the API, for increased security. 
 
-## Accessibility
+## 8. Accessibility
 
 ### Semantic HTML:  
 Semantic HTML is used to provide more context to screen readers.
