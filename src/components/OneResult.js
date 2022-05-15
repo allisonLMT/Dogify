@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/oneResult.module.scss';
 import Heart from '../components/Heart';
 
-function OneResult({ result, updateLocalFaves }) {
+function OneResult({ result, updateLocalFaves, i }) {
 
     //takes the 'model' key (which is the engine used to get the result) and changes it to the format used in the Settings modal.
     //note that the format of the model value is not consistent (some use '-' and some use ':'), so search for substring is more consistent
@@ -23,7 +23,7 @@ function OneResult({ result, updateLocalFaves }) {
         <article className={styles.oneResult}>
             <Heart result={result} updateLocalFaves={updateLocalFaves}/>
             <section className={styles.prompt}>
-                <h3>Prompt:</h3>
+                <h3>Prompt:{i}</h3>
                 <p>{result.prompt}</p>
             </section>
             <section>

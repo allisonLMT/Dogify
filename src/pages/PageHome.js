@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HashLink } from 'react-router-hash-link';
+import _ from "lodash";
 import NavMenu from '../components/NavMenu';
 import SettingsModal from '../components/SettingsModal';
 import LoadingDots from '../components/LoadingDots';
@@ -26,6 +27,7 @@ function PageHome() {
     const [selectedEngine, setSelectedEngine] = useState('text-curie-001');
     //load status used for determining if loading dots show or not
     const [loading, setLoading] = useState(false);
+
 
     function handleInput(e) {
 
@@ -69,6 +71,7 @@ function PageHome() {
             //takes the existing result array, and concats the new response
             //then reverses the array (so when mapped, they are newest to oldest) and updates the result state
             var updatedResults = results.concat(data).reverse();
+            
             setResults(updatedResults);
             setLoading(false)
         });
