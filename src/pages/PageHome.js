@@ -23,6 +23,8 @@ function PageHome() {
     const [results, setResults] = useState([]);
     //engine selected from settings modal
     const [selectedEngine, setSelectedEngine] = useState('text-curie-001');
+
+    const [isLoaded, setIsLoaded] = useState(false);
   
 
     function handleInput(e) {
@@ -36,7 +38,13 @@ function PageHome() {
         const sanitizedInputValue = e.target.value.replace(regex, '');
        
         setSanitizedInput(sanitizedInputValue);
+    }
 
+    function detectEnter(e) {
+        //allows Enter in the text input to submit 
+        if (e.key === "Enter") {
+            onSubmit();
+        }
     }
 
     function onSubmit() {
@@ -151,8 +159,8 @@ function PageHome() {
                             // API allows maxlength = 1000
                             maxLength="200"
                             onChange={(e) => handleInput(e)}
+                            onKeyUp={(e) => detectEnter(e)}
                         />
-                        
                         <input type="submit" value="Dogify Now!" className={styles.submit} onClick={onSubmit}/>
                     </section>
                 </div>
