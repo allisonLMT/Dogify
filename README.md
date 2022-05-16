@@ -1,3 +1,4 @@
+
 # Shopify Intern Tech Challenge - README
 
 This project was created by Allison Tredwell for the Shopify Front End Developer Fall 2022 Internship application.
@@ -62,7 +63,9 @@ https://atredwell.com/dogify/
 The day I first started experimenting with the types of prompts that could be used, it would’ve been my dog’s 11th birthday. With her on my mind, my prompt turned to “write a story about a Goldendoodle and {user input}”. Every story made me smile, and I decided to keep the prompt, but expand on it. 
 
 ## 6. Style: 
-The color scheme was inspired by my dog’s collar, which we had picked because the colors seemed so happy-go-lucky, like her. I felt like they reflected the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
+The color scheme is inspired by my dog’s collar, which we chose because the colors are so happy-go-lucky, like her. I feel they reflect the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
+
+![dogify-style-tile](https://user-images.githubusercontent.com/59849533/168679332-e06aea00-7490-41c6-9557-d9945347a2bf.png)
 
 ## 7. Features:
 
