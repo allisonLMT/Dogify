@@ -60,7 +60,7 @@ to open the project in your browser.
 https://atredwell.com/dogify/
 
 ## 5. Inspiration: 
-The day I first started experimenting with the types of prompts that could be used, it would’ve been my dog’s 11th birthday. With her on my mind, my prompt turned to “write a story about a Goldendoodle and {user input}”. Every story made me smile, and I decided to keep the prompt, but expand on it. 
+The day I first started experimenting with the types of prompts that could be used was on my dog's birthday. With her in mind, my prompt turned to “write a story about a Goldendoodle and {user input}”. Every story made me smile, and I decided to keep the prompt, but expand on it. 
 
 ## 6. Style: 
 The color scheme is inspired by my dog’s collar, which we chose because the colors are so happy-go-lucky, like her. I feel they reflect the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
