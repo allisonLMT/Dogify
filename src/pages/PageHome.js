@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HashLink } from 'react-router-hash-link';
-import _ from "lodash";
 import NavMenu from '../components/NavMenu';
 import SettingsModal from '../components/SettingsModal';
 import LoadingDots from '../components/LoadingDots';
