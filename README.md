@@ -27,6 +27,8 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 
 [7.4 Sanitized User Input](#74-sanitized-user-input)
 
+[7.5 Engine Selection](#75-engine-selection)
+
 [8. Accessibility](#8-accessibility)
 
 [8.1 Semantic HTML](#81-semantic-html)
@@ -36,6 +38,8 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 [8.3 Skip To Content](#83-skip-to-content)
 
 [8.4 Sizing in rem](#84-sizing-in-rem)
+
+[8.5 Submission with Enter Key](#85-submission-with-enter-key)
 
 
 
@@ -88,6 +92,9 @@ Users can add stories to their Favorites list by clicking on a grey heart. The l
 ### 7.4 Sanitized User Input: 
 The user input is sanitized before being sent to the API, for increased security. 
 
+### 7.5 Engine Selection:
+Users can select the engine that is used, and the chosen engine is also displayed with their results. The default engine is Curie.
+
 
 ## 8. Accessibility
 
@@ -102,3 +109,6 @@ Skip to Content links on each page are hidden until they are in focus, then they
 
 ### 8.4 Sizing in rem: 
 Sizing is done in rem (instead of px) to respect the font-size preferences set by the user.
+
+### 8.5 Submission with Enter Key:
+Once focus is on the form, users can submit with the Enter key. This allows keyboard-only users to submit the form.

@@ -146,7 +146,7 @@ function PageHome() {
                             <h2>What's Dogify?</h2>
                             <SettingsModal onRadioChange={onRadioChange} selectedEngine={selectedEngine}/>
                         </div>
-                        <p>Dogify will write a story about a dog and whatever else you choose!</p>
+                        <p>Dogify uses AI to write a story about a dog and whatever else you choose!</p>
                         <p>Not sure? Hit Shuffle! And don't worry, we'll pick a dog for you.</p>
                     </section>
                     <section className={styles.form}>
