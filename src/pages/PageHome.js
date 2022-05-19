@@ -101,7 +101,7 @@ function PageHome() {
     }
 
     function shuffleItem() {
-        const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup', 'apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip', 'a capybara in an intertube', 'monkey bars', 'a crocheted giraffe', 'a gold pocket watch', 'otters holding hands', 'some mismatched socks'];
+        const items = ['a small wood chip', 'a handlebar mustache', 'a monocle and tophat', 'a campfire and smores', 'a pair of shoes', 'cat with a pom-pom crinkle ball', 'some warm cookies and milk','a dark and stormy night', 'a hotdog with ketchup', 'apple pie and vanilla ice cream', 'a walk along the beach', 'a cup of tea and a good book', 'a buried treasure', 'a jack-o-lantern', 'a big gloopy mud puddle', 'a road trip', 'a capybara in an intertube', 'monkey bars', 'a crocheted giraffe', 'a gold pocket watch', 'otters holding hands', 'some mismatched socks', 'a yellow convertible', 'an ice cream cone', 'a thingy-thing'];
 
         const item = items[randomNum(items)];
         setUserInput(item);

@@ -13,18 +13,16 @@
     line-height: 1;
     border: 0.125rem solid $darkAccent;
     border-radius: 0.3125rem;
-    background-color: $darkAccent;
-    filter: drop-shadow(0.1875rem 0.1875rem 0.1875rem darkgrey);
+    background-color: rgb(34,34,34);
+    filter: drop-shadow(0.375rem 0.375rem 0.3125rem darkgrey);
     cursor: pointer;
     text-align: center;
     transition: background-color 250ms ease-in-out, transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 
     &:hover,
     &:focus {
-    background-color: $darkGreen;
-    color: black;
+        color: black;
+        background-color: $darkGreen;
     }
 
     &:active {
@@ -32,6 +30,10 @@
     }
 }
 
+//Green Linear Gradient (for footer and nav)
+@mixin green-gradient {
+    background: linear-gradient(0deg, rgba(57,176,157,1) 70%, rgba(70,195,174,1) 100%);
+}
 
 // Translucent Button 
 @mixin translucent-button {

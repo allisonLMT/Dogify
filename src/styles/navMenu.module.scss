@@ -1,16 +1,16 @@
 @use '_variables' as *;
+@use '_mixins' as *;
 
 .navWrap {
+    @include green-gradient;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-color: $darkGreen;
     height: 4.6875rem;
     width: 100%;
     z-index: 15;
-    filter: drop-shadow(0.125rem 0.125rem 0.1875rem darkgrey);
-    
+    filter: drop-shadow(0.1875rem 0.1875rem 0.3125rem darkgrey);
 }
 
 .navBar {

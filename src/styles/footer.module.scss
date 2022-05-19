@@ -1,6 +1,8 @@
 @use '_variables' as *;
+@use '_mixins' as *;
 
 .footer {
+    @include green-gradient;
     position: absolute;
     bottom: 0rem; 
     width: 100%;
@@ -9,8 +11,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $darkGreen;
-    filter: drop-shadow(-0.125rem -0.125rem 0.1875rem darkgrey);
+    //background-color: $darkGreen;
+    filter: drop-shadow(-0.1875rem -0.1875rem 0.3125rem darkgrey);
 }
 
 .footer a {
