@@ -20,7 +20,7 @@ function PageAbout() {
                             <img src={paw} alt="Dogify logo" />
                         <div className={styles.about}>
                             <h2>About Dogify</h2>
-                            <p>Dogify is an app that creates a story about a dog created by Allison Tredwell. It was built using React js and OpenAI API.</p>
+                            <p>Dogify is an app that uses OpenAI to write a story about a dog and anything the user inputs. It was designed and developed by Allison Tredwell using React js and OpenAI API.</p>
                         </div>
                     </section>
                     <section className={styles.OpenAI}>
