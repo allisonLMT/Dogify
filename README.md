@@ -19,27 +19,27 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 
 [7. Features](#7-features)
 
-[7.1 Randomization](#71-randomization)
+&emsp; [7.1 Randomization](#71-randomization)
 
-[7.2 Shuffle Button](#72-shuffle-button)
+&emsp; [7.2 Shuffle Button](#72-shuffle-button)
 
-[7.3 Favorites List](#73-favorites-list)
+&emsp; [7.3 Favorites List](#73-favorites-list)
 
-[7.4 Sanitized User Input](#74-sanitized-user-input)
+&emsp; [7.4 Sanitized User Input](#74-sanitized-user-input)
 
-[7.5 Engine Selection](#75-engine-selection)
+&emsp; [7.5 Engine Selection](#75-engine-selection)
 
 [8. Accessibility](#8-accessibility)
 
-[8.1 Semantic HTML](#81-semantic-html)
+&emsp; [8.1 Semantic HTML](#81-semantic-html)
 
-[8.2 Color Contrast](#82-color-contrast)
+&emsp; [8.2 Color Contrast](#82-color-contrast)
 
-[8.3 Skip To Content](#83-skip-to-content)
+&emsp; [8.3 Skip To Content](#83-skip-to-content)
 
-[8.4 Sizing in rem](#84-sizing-in-rem)
+&emsp; [8.4 Sizing in rem](#84-sizing-in-rem)
 
-[8.5 Submission with Enter Key](#85-submission-with-enter-key)
+&emsp; [8.5 Submission with Enter Key](#85-submission-with-enter-key)
 
 
 
