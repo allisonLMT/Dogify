@@ -3,6 +3,7 @@
 
 This project was created by Allison Tredwell for the Shopify Front End Developer Fall 2022 Internship application.
 
+
 ## Table of Contents:
 [1. Goal](#1-goal)
 
@@ -41,10 +42,12 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 ## 1. Goal: 
 Create an app that sends a text prompt collected from the user to the OpenAI API, and displays the results in a list. 
 
+
 ## 2. Shopify’s Requirements:
 A form for entering text prompts, which submits to OpenAI API
 Results displayed and stored in a list (newest to oldest), with the prompt and response.
 Accessible, semantic HTML
+
 
 ## 3. Installation: 
 Download the zip file from GitHub. Unzip, then open the folder with your code editor.
@@ -56,16 +59,20 @@ Then, run:
 ### `npm start` 
 to open the project in your browser.
 
+
 ## 4. Hosted Demo: 
 https://atredwell.com/dogify/
 
+
 ## 5. Inspiration: 
 The day I first started experimenting with the types of prompts that could be used was on my dog's birthday. With her in mind, my prompt turned to “write a story about a Goldendoodle and {user input}”. Every story made me smile, and I decided to keep the prompt, but expand on it. 
+
 
 ## 6. Style: 
 The color scheme is inspired by my dog’s collar, which we chose because the colors are so happy-go-lucky, like her. I feel they reflect the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
 
 ![Dogify-Style-Tile](https://user-images.githubusercontent.com/59849533/169336423-49f5b8d1-b193-4850-97ca-6b34e0b61437.png)
+
 
 ## 7. Features:
 
