@@ -49,9 +49,9 @@ Create an app that sends a text prompt collected from the user to the OpenAI API
 
 ## 2. Shopify’s Requirements:
 Base level requirements requested by Shopify are:
--A form for entering text prompts, which submits to OpenAI API
--Results displayed and stored in a list (newest to oldest), with the prompt and response.
--Accessible, semantic HTML
+-A form for entering text prompts, which submits to OpenAI API <br/>
+-Results displayed and stored in a list (newest to oldest), with the prompt and response.<br/>
+-Accessible, semantic HTML<br/>
 
 
 ## 3. Installation: 
