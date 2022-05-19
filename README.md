@@ -73,7 +73,7 @@ The color scheme is inspired by my dog’s collar, which we chose because the co
 A random dog breed is added to each prompt, for variety.
 
 ### 7.2 Shuffle Button: 
-If the user isn’t sure what to add, or would like to see some examples, they can shuffle to view the randomized items. If the user doesn’t enter any text, a random prompt will be provided for each new submit.
+If the user isn’t sure what to add, or would like to see some examples, they can shuffle to view the randomized items. If the user doesn’t enter any text, a random prompt will be provided.
 
 ### 7.3 Favorites List: 
 Users can add stories to their Favorites list by clicking on a grey heart. The list is saved in local storage which allows users to keep their Favorites on their device, without the need to log in or create an account. The Favorites are live updated on the Favorites page. 
@@ -90,7 +90,7 @@ Semantic HTML is used to provide more context to screen readers.
 All color combinations were tested with https://webaim.org/resources/contrastchecker/ to ensure that accessibility guidelines were met.
 
 ### 8.3 Skip To Content: 
-Skip to Content links on each page are hidden until they are in focus, then they appear and allow the user to move directly to the content without listening to the navigation.
+Skip to Content links on each page are hidden until they are in focus, then they appear and allow the user's screen reader to by-pass the navigation and proceed directly to the main content.
 
 ### 8.4 Sizing in rem: 
 Sizing is done in rem (instead of px) to respect the font-size preferences set by the user.
