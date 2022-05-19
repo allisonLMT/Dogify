@@ -29,6 +29,8 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 
 &emsp; [7.5 Engine Selection](#75-engine-selection)
 
+&emsp; [7.6 Loading Dots](#76-loading-dots)
+
 [8. Accessibility](#8-accessibility)
 
 &emsp; [8.1 Semantic HTML](#81-semantic-html)
@@ -96,6 +98,8 @@ The user input is sanitized before being sent to the API, for increased security
 ### 7.5 Engine Selection:
 Users can select the engine that is used, and the chosen engine is also displayed with their results. The default engine is Curie.
 
+### 7.6 Loading Dots:
+Animated dots appear when the user has submitted input, and the app is waiting for a response. This shows the user that their submission has occurred and the app is waiting for a reponses from the API. The loading dots disappear once the data loads.
 
 ## 8. Accessibility
 
