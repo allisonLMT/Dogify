@@ -65,7 +65,7 @@ The day I first started experimenting with the types of prompts that could be us
 ## 6. Style: 
 The color scheme is inspired by my dog’s collar, which we chose because the colors are so happy-go-lucky, like her. I feel they reflect the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
 
-![Dogify-Style-Tile](https://user-images.githubusercontent.com/59849533/169138800-0b4cb63b-8652-4617-aec3-26bed7f04b02.png)
+![Dogify-Style-Tile](https://user-images.githubusercontent.com/59849533/169335328-fdce8527-21b6-49bf-b2e9-195bbc1721ca.png)
 
 ## 7. Features:
 
