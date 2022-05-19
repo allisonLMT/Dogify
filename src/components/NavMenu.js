@@ -31,14 +31,14 @@ function NavMenu({ page }) {
                 </div> 
                 <div className={styles.desktopNav}>
                     <NavLink to='/' className = { (page === 'home') ? styles.active : styles.inactive } >home</NavLink>
-                    <NavLink to='/about' className = { (page === 'about') ? styles.active : styles.inactive }>about</NavLink>
                     <NavLink to='/favorites' className = { (page === 'favorites') ? styles.active : styles.inactive }>favorites</NavLink>
+                    <NavLink to='/about' className = { (page === 'about') ? styles.active : styles.inactive }>about</NavLink>
                 </div>
             </nav>
             <nav className={ classes( styles.navMenu, { [styles.open] : isOpen }) }>
                 <NavLink to='/'>home</NavLink>
-                <NavLink to='/about'>about</NavLink>
                 <NavLink to='/favorites' >favorites</NavLink>
+                <NavLink to='/about'>about</NavLink>
             </nav>
         </div>  
 
