@@ -65,7 +65,7 @@ The day I first started experimenting with the types of prompts that could be us
 ## 6. Style: 
 The color scheme is inspired by my dog’s collar, which we chose because the colors are so happy-go-lucky, like her. I feel they reflect the happy, silly nature of the app. For fonts, my main priority is readability, but I also wanted something playful and fun for the title. 
 
-![dogify-style-tile](https://user-images.githubusercontent.com/59849533/168679332-e06aea00-7490-41c6-9557-d9945347a2bf.png)
+![Dogify-Style-Tile](https://user-images.githubusercontent.com/59849533/169336423-49f5b8d1-b193-4850-97ca-6b34e0b61437.png)
 
 ## 7. Features:
 
@@ -80,6 +80,7 @@ Users can add stories to their Favorites list by clicking on a grey heart. The l
 
 ### 7.4 Sanitized User Input: 
 The user input is sanitized before being sent to the API, for increased security. 
+
 
 ## 8. Accessibility
 
