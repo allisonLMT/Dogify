@@ -30,11 +30,7 @@
     }
 }
 
-//Green Linear Gradient (for footer and nav)
-@mixin green-gradient {
-    background: linear-gradient(0deg, rgba(57,176,157,1) 70%, rgba(70,195,174,1) 100%);
-}
-
+//Linear Gradient (for footer and nav)
 @mixin black-gradient {
     background: rgb(34,34,34);
     background: linear-gradient(0deg, rgba(34,34,34,1) 70%, rgba(68,68,68,1) 100%);

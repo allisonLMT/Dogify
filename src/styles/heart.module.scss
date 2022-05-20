@@ -10,8 +10,7 @@
     filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
     
     &:hover {
-        stroke: $darkAccent;
-        stroke-width: 2px;
+        transform: scale(1.1);
     }
 }
 
@@ -20,7 +19,6 @@
     filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
 
     &:hover {
-        stroke: $darkAccent;
-        stroke-width: 2px;
+        transform: scale(1.1);
     }
 }

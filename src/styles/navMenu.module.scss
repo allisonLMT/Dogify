@@ -2,7 +2,6 @@
 @use '_mixins' as *;
 
 .navWrap {
-    //@include green-gradient;
     @include black-gradient;
     display: flex;
     justify-content: center;
@@ -28,7 +27,6 @@
     a:focus,
     a:hover,
     a:active {
-        //color: black;
         color: $darkGreen;
     }
 
@@ -79,7 +77,6 @@
     position: absolute;
     height: 0.1875rem;
     width: 90%;
-    //background: black;
     background: $darkGreen;
     border-radius: 0.125rem;
     opacity: 1;
@@ -141,9 +138,11 @@
         padding: 1.25rem 1.875rem 1.25rem 1.25rem;
         background-color: #222222;
         color: white;
+        color: $darkGreen;
         text-decoration: none;
+        text-transform: uppercase;
         text-align: right;
-        font-size: 1.125rem;
+        font-size: 1.3rem;
     }
 
     @media (min-width: 62.5rem) {
@@ -170,7 +169,8 @@ div.desktopNav {
     a {
         margin: 0 2.5rem;
         text-decoration: none;
-        font-size: 1.25rem;
+        text-transform: uppercase;
+        font-size: 1.3rem;
     }
 
     @media (min-width: 62.5rem) {
@@ -179,7 +179,6 @@ div.desktopNav {
 }
 
 .desktopNav .active {
-   //border-bottom: 0.125rem solid black;
    border-bottom: 0.125rem solid $darkGreen;
 }
 

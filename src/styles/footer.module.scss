@@ -2,7 +2,6 @@
 @use '_mixins' as *;
 
 .footer {
-   // @include green-gradient;
     @include black-gradient;
     position: absolute;
     bottom: 0rem; 
@@ -17,7 +16,6 @@
 
 .footer a {
     text-decoration: none;
-    //color: black;
     color: $darkGreen;
     font-size: 1.1rem;
 
@@ -26,7 +24,6 @@
     &:active,
     &:focus {
         text-decoration: none;
-        //color: black;
         color: $darkGreen;
     }
     
