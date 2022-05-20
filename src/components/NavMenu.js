@@ -36,9 +36,9 @@ function NavMenu({ page }) {
                 </div>
             </nav>
             <nav className={ classes( styles.navMenu, { [styles.open] : isOpen }) }>
-                <NavLink to='/'>home</NavLink>
-                <NavLink to='/favorites' >favorites</NavLink>
-                <NavLink to='/about'>about</NavLink>
+                <NavLink to='/' onClick={() => { handleToggle() }} >home</NavLink>
+                <NavLink to='/favorites' onClick={() => { handleToggle() }} >favorites</NavLink>
+                <NavLink to='/about'onClick={() => { handleToggle() }} >about</NavLink>
             </nav>
         </div>  
 
