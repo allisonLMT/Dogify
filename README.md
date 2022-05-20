@@ -43,6 +43,8 @@ This project was created by Allison Tredwell for the Shopify Front End Developer
 
 &emsp; [8.5 Submission with Enter Key](#85-submission-with-enter-key)
 
+[9. Approval](#9-approval)
+
 
 
 ## 1. Goal: 
@@ -117,3 +119,6 @@ Sizing is done in rem (instead of px) to respect the font-size preferences set b
 
 ### 8.5 Submission with Enter Key:
 Once focus is on the form, users can submit with the Enter key. This allows keyboard-only users to submit the form.
+
+## 9. Approval:
+Conditional approval has been obtained from OpenAI for the duration of the application process.
