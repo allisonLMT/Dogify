@@ -64,6 +64,14 @@ Download the zip file from GitHub. Unzip, then open the folder with your code ed
 In the terminal, run:
 ###  `npm install`
 
+Sign up for a free API key from OpenAI.
+
+In the root folder, create a .env.local file.
+
+Add: 
+### `REACT_APP_OPENAI_API_KEY=`your_unique_API_key_here
+Make sure your key does not have any quotations around it.
+
 Then, run:
 ### `npm start` 
 to open the project in your browser.
