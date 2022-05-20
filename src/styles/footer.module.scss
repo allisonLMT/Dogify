@@ -2,7 +2,8 @@
 @use '_mixins' as *;
 
 .footer {
-    @include green-gradient;
+   // @include green-gradient;
+    @include black-gradient;
     position: absolute;
     bottom: 0rem; 
     width: 100%;
@@ -11,21 +12,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //background-color: $darkGreen;
     filter: drop-shadow(-0.1875rem -0.1875rem 0.3125rem darkgrey);
 }
 
 .footer a {
     text-decoration: none;
-    color: black;
-    font-size: 1rem;
+    //color: black;
+    color: $darkGreen;
+    font-size: 1.1rem;
 
     &:visited,
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
-        color: black;
+        //color: black;
+        color: $darkGreen;
     }
     
 }

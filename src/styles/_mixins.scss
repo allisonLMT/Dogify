@@ -1,6 +1,6 @@
 @use '_variables' as *;
 
-// Green Button
+// Dark Button
 // https://css-tricks.com/overriding-default-button-styles/
 @mixin dark-button {
     display: block;
@@ -33,6 +33,11 @@
 //Green Linear Gradient (for footer and nav)
 @mixin green-gradient {
     background: linear-gradient(0deg, rgba(57,176,157,1) 70%, rgba(70,195,174,1) 100%);
+}
+
+@mixin black-gradient {
+    background: rgb(34,34,34);
+    background: linear-gradient(0deg, rgba(34,34,34,1) 70%, rgba(68,68,68,1) 100%);
 }
 
 // Translucent Button 

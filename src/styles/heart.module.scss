@@ -7,10 +7,20 @@
 
 .fav {
     fill: $darkGreen;
-    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey)
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
+    
+    &:hover {
+        stroke: $darkAccent;
+        stroke-width: 2px;
+    }
 }
 
 .notFav {
     fill: darkgrey;
-    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey)
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
+
+    &:hover {
+        stroke: $darkAccent;
+        stroke-width: 2px;
+    }
 }

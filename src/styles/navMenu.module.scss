@@ -2,7 +2,8 @@
 @use '_mixins' as *;
 
 .navWrap {
-    @include green-gradient;
+    //@include green-gradient;
+    @include black-gradient;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +28,8 @@
     a:focus,
     a:hover,
     a:active {
-        color: black;
+        //color: black;
+        color: $darkGreen;
     }
 
     img {
@@ -77,7 +79,8 @@
     position: absolute;
     height: 0.1875rem;
     width: 90%;
-    background: black;
+    //background: black;
+    background: $darkGreen;
     border-radius: 0.125rem;
     opacity: 1;
     left: 0;
@@ -176,7 +179,8 @@ div.desktopNav {
 }
 
 .desktopNav .active {
-   border-bottom: 0.125rem solid black;
+   //border-bottom: 0.125rem solid black;
+   border-bottom: 0.125rem solid $darkGreen;
 }
 
 .desktopNav .inactive {
