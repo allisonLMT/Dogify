@@ -78,7 +78,7 @@ to open the project in your browser.
 
 
 ## 4. Hosted Demo: 
-https://atredwell.com/dogify/
+Hosted demo is no longer available, due to limited OpenAI license.
 
 
 ## 5. Inspiration: 
